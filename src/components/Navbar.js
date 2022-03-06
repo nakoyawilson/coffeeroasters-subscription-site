@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
-  const { handleToggle, closeMenu, navOpen } = props;
+  const { closeMenu, navOpen } = props;
   return (
     <nav className={`navigation ${navOpen ? "open" : ""}`}>
       <ul className="nav-links">
