@@ -16,7 +16,7 @@ const Home = () => {
       </section>
       <section className="collection">
         <h2 className="heading">Our collection</h2>
-        <div>
+        <div className="grid">
           <div>
             <img
               src="assets/home/desktop/image-gran-espresso.png"
