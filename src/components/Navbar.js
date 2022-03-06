@@ -4,9 +4,6 @@ const Navbar = (props) => {
   const { handleToggle, closeMenu, navOpen } = props;
   return (
     <nav className={`navigation ${navOpen ? "open" : ""}`}>
-      <button className="navigation-button" onClick={handleToggle}>
-        <img src="assets/shared/mobile/icon-close.svg" alt="" />
-      </button>
       <ul className="nav-links">
         <li className="nav-item">
           <NavLink

@@ -6,10 +6,12 @@ const Header = () => {
 
   const handleToggle = () => {
     setNavOpen((prev) => !prev);
+    document.querySelector("body").classList.toggle("lock-scroll");
   };
 
   const closeMenu = () => {
     setNavOpen(false);
+    document.querySelector("body").classList.toggle("lock-scroll");
   };
 
   return (
@@ -20,7 +22,14 @@ const Header = () => {
         className="logo"
       />
       <button className="navigation-button" onClick={handleToggle}>
-        <img src="assets/shared/mobile/icon-hamburger.svg" alt="" />
+        <img
+          src={
+            navOpen
+              ? "assets/shared/mobile/icon-close.svg"
+              : "assets/shared/mobile/icon-hamburger.svg"
+          }
+          alt=""
+        />
       </button>
       <Navbar
         handleToggle={handleToggle}

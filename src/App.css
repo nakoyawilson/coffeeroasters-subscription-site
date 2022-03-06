@@ -49,7 +49,7 @@ a {
 }
 
 button {
-  background-color: none;
+  background: none;
   border: none;
 }
 
@@ -89,16 +89,52 @@ ul {
   width: 14.021rem;
 }
 
+.header .logo,
+.navigation-button {
+  position: relative;
+  z-index: 100;
+}
+
 /* Navigation */
 
 .navigation {
+  background: linear-gradient(
+    to top,
+    rgba(254, 252, 247, 0.504981) 0%,
+    #fefcf7 55.94%
+  );
   position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
   height: 100vh;
-  transform: translateX(100%);
+  transform: translateY(-100%);
   transition: 500ms ease-in-out;
+  z-index: 10;
+}
+
+.navigation.open {
+  transform: translateY(0);
+  transition: 500ms ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 13rem;
+}
+
+.nav-link {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--dark-grey-blue);
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
 
 /* Home Page */
