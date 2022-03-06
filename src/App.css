@@ -14,6 +14,7 @@
   /* --dark-cream: rgb(3, 2, 0); */
   --grey: rgb(131, 136, 143);
   --white: rgb(255, 255, 255);
+  --white-transparent: rgba(255, 255, 255, 0.5);
   --font-gradient: -webkit-linear-gradient(
     180deg,
     rgba(254, 252, 247, 0.0001) 0%,
@@ -79,6 +80,10 @@ address {
 .paragraph {
   font-size: 1.5rem;
   line-height: 2.5rem;
+}
+
+.grid {
+  display: grid;
 }
 
 /* Header */
@@ -194,7 +199,6 @@ address {
 }
 
 .collection .grid {
-  display: grid;
   grid-template-columns: 1fr;
   gap: 4.8rem;
 }
@@ -240,7 +244,6 @@ address {
 }
 
 .choose-us .grid {
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 38.2rem);
   gap: 2.4rem;
@@ -294,7 +297,6 @@ address {
 }
 
 .how-it-works .grid {
-  display: grid;
   grid-template-columns: 1fr;
   gap: 5.6rem;
   margin: 8rem auto 7.9rem;
@@ -417,7 +419,6 @@ address {
 
 .headquarters .grid {
   margin-top: 7.2rem;
-  display: grid;
   grid-template-columns: 1fr;
   gap: 8rem;
 }
@@ -436,6 +437,88 @@ address {
   display: block;
   font-size: 1.6rem;
   line-height: 2.6rem;
+}
+
+/* Subscribe */
+
+/* Hero Section */
+
+.subscribe-hero {
+  margin: 0 auto;
+  padding: 10.1rem 2.4rem 13.6rem;
+  background-image: url("../public/assets/plan/mobile/image-hero-blackcup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.subscribe-hero .heading {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--light-cream);
+}
+
+.subscribe-hero .paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--light-cream-transparent);
+  margin-top: 2.2rem;
+}
+
+/* Steps */
+
+.steps {
+  background: var(--dark-grey);
+  border-radius: 10px;
+  margin-top: 12rem;
+  padding: 8rem 2.4rem 7.9rem;
+}
+
+.steps.grid {
+  grid-template-columns: 1fr;
+  gap: 5.6rem;
+}
+
+.steps .subheading {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  color: var(--white);
+}
+
+.steps .paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--white);
+  margin-top: 2.4rem;
+}
+
+/* Order Summary */
+
+.order-summary .container {
+  margin: 12rem auto 0;
+  padding: 3.2rem 2.4rem 3.2rem 2.5rem;
+  background: var(--dark-grey);
+  border-radius: 10px;
+}
+
+.summary-heading {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+  color: var(--white-transparent);
+}
+
+.summary-text {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: var(--white);
+}
+
+.order-summary .create-button {
+  margin-top: 5.6rem;
+  padding: 1.5rem 3.55rem 1.6rem;
 }
 
 /* Footer */
