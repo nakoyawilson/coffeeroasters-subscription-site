@@ -6,11 +6,12 @@
   --cyan: rgba(102, 210, 207, 1);
   --dark-cyan: rgb(14, 135, 132);
   --dark-grey-blue: rgb(51, 61, 75);
+  --dark-grey-blue-transparent: rgba(51, 61, 75, 0.8);
   --dark-grey: rgba(44, 52, 62, 1);
   --pale-orange: rgb(253, 214, 186);
   --light-cream: rgb(254, 252, 247);
   --light-cream-transparent: rgba(254, 252, 247, 0.8);
-  --dark-cream: rgb(3, 2, 0);
+  /* --dark-cream: rgb(3, 2, 0); */
   --grey: rgb(131, 136, 143);
   --white: rgb(255, 255, 255);
   --font-gradient: -webkit-linear-gradient(
@@ -59,6 +60,10 @@ img {
 
 ul {
   list-style: none;
+}
+
+address {
+  font-style: normal;
 }
 
 .container {
@@ -307,6 +312,130 @@ ul {
   line-height: 7.2rem;
   color: var(--pale-orange);
   margin-bottom: 2.4rem;
+}
+
+/* About Us Page */
+
+/* Hero Section */
+
+.about {
+  margin: 0 auto;
+  padding: 11.1rem 2.4rem 8.7rem;
+  background-image: url("../public/assets/about/mobile/image-hero-whitecup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.about .heading {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  color: var(--light-cream);
+}
+
+.about .paragraph {
+  color: var(--light-cream-transparent);
+  margin-top: 2.4rem;
+}
+
+/* Our Commitment */
+
+.commitment {
+  margin: 12rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.commitment-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.commitment .heading {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+}
+
+.commitment .paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--dark-grey-blue-transparent);
+  margin-top: 3rem;
+}
+
+/* Quality */
+
+.quality {
+  margin: 19.8rem auto 0;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  padding: 14.2rem 2.4rem 6.1rem;
+  position: relative;
+}
+
+.quality::before {
+  content: "";
+  width: min(85.3%, 27.9rem);
+  height: 15.6rem;
+  background-image: url("../public/assets/about/mobile/image-quality.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -7.8rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+.quality .heading {
+  color: var(--light-cream);
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+
+.quality .paragraph {
+  margin-top: 2.4rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--light-cream-transparent);
+}
+
+/* Headquarters */
+
+.headquarters {
+  margin: 12rem auto 0;
+}
+
+.headquarters .heading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--grey);
+}
+
+.headquarters .grid {
+  margin-top: 7.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8rem;
+}
+
+.headquarters-illustration {
+  margin: 0 auto 4.8rem;
+}
+
+.headquarters .subheading {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.contact-info {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
 }
 
 /* Footer */
