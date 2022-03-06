@@ -13,8 +13,12 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <img src="assets/shared/desktop/logo.svg" alt="Coffee Roasters logo" />
+    <header className="header container">
+      <img
+        src="assets/shared/desktop/logo.svg"
+        alt="Coffee Roasters logo"
+        className="logo"
+      />
       <button className="navigation-button" onClick={handleToggle}>
         <img src="assets/shared/mobile/icon-hamburger.svg" alt="" />
       </button>
