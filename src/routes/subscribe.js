@@ -1,4 +1,4 @@
-const Plan = () => {
+const Subscribe = () => {
   return (
     <main>
       Home About us Create your plan Create a plan Build a subscription plan
@@ -42,4 +42,4 @@ const Plan = () => {
   );
 };
 
-export default Plan;
+export default Subscribe;

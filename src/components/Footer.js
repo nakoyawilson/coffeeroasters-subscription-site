@@ -33,7 +33,7 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link to="/plan" className="footer-link">
+          <Link to="/subscribe" className="footer-link">
             Create your plan
           </Link>
         </li>

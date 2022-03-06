@@ -29,7 +29,7 @@ const Navbar = (props) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/plan"
+            to="/subscribe"
             className={({ isActive }) =>
               `nav-link ${isActive ? "active-nav-link" : ""}`
             }
