@@ -3,48 +3,66 @@ import RadioButton from "./RadioButton";
 
 const FormElement = (props) => {
   const [checkedIndex, setCheckedIndex] = useState(false);
+  const [isActive, setIsActive] = useState(props.initialActiveState);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <div className="order-option">
-      <button className="question-wrapper">
+      <button
+        type="button"
+        className={`question-wrapper ${
+          props.questionDisabled ? "disabled-button" : ""
+        }`}
+        onClick={handleClick}
+        disabled={props.questionDisabled}
+      >
         <h2 className="question">{props.question}</h2>
-        <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+        <img
+          src="assets/plan/desktop/icon-arrow.svg"
+          alt=""
+          className={isActive ? "question-expanded" : ""}
+        />
       </button>
-      <div className="answers grid">
-        <RadioButton
-          labelClasses={props.labelClasses}
-          questionName={props.questionName}
-          answerId={props.firstAnswerValue}
-          answerValue={props.firstAnswerValue}
-          answer={props.firstAnswer}
-          isChecked={checkedIndex === 0}
-          handleChange={() => {
-            setCheckedIndex(0);
-          }}
-        />
-        <RadioButton
-          labelClasses={props.labelClasses}
-          questionName={props.questionName}
-          answerId={props.secondAnswerValue}
-          answerValue={props.secondAnswerValue}
-          answer={props.secondAnswer}
-          isChecked={checkedIndex === 1}
-          handleChange={() => {
-            setCheckedIndex(1);
-          }}
-        />
-        <RadioButton
-          labelClasses={props.labelClasses}
-          questionName={props.questionName}
-          answerId={props.thirdAnswerValue}
-          answerValue={props.thirdAnswerValue}
-          answer={props.thirdAnswer}
-          isChecked={checkedIndex === 2}
-          handleChange={() => {
-            setCheckedIndex(2);
-          }}
-        />
-      </div>
+      {isActive && (
+        <div className="answers grid">
+          <RadioButton
+            labelClasses={props.labelClasses}
+            questionName={props.questionName}
+            answerId={props.firstAnswerValue}
+            answerValue={props.firstAnswerValue}
+            answer={props.firstAnswer}
+            isChecked={checkedIndex === 0}
+            handleChange={() => {
+              setCheckedIndex(0);
+            }}
+          />
+          <RadioButton
+            labelClasses={props.labelClasses}
+            questionName={props.questionName}
+            answerId={props.secondAnswerValue}
+            answerValue={props.secondAnswerValue}
+            answer={props.secondAnswer}
+            isChecked={checkedIndex === 1}
+            handleChange={() => {
+              setCheckedIndex(1);
+            }}
+          />
+          <RadioButton
+            labelClasses={props.labelClasses}
+            questionName={props.questionName}
+            answerId={props.thirdAnswerValue}
+            answerValue={props.thirdAnswerValue}
+            answer={props.thirdAnswer}
+            isChecked={checkedIndex === 2}
+            handleChange={() => {
+              setCheckedIndex(2);
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

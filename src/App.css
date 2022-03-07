@@ -541,6 +541,14 @@ label {
   color: var(--grey);
 }
 
+.question-expanded {
+  transform: rotate(180deg);
+}
+
+.disabled-button {
+  opacity: 0.5;
+}
+
 .answers {
   margin-top: 3.2rem;
   grid-template-columns: 1fr;

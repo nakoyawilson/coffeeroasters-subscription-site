@@ -12,6 +12,7 @@ const Subscribe = () => {
     frequency: "______",
   });
   const [totalCost, setTotalCost] = useState("0.00");
+  const [disableGrind, setDisableGrind] = useState(false);
 
   Modal.setAppElement("#root");
 
@@ -77,9 +78,15 @@ const Subscribe = () => {
   };
 
   const handleOrderChange = (e) => {
+    e.preventDefault();
     const order = { ...userOrder };
     if (e.target.name === "method") {
       order.method = e.target.value;
+      if (e.target.value === "Capsule") {
+        setDisableGrind(true);
+      } else {
+        setDisableGrind(false);
+      }
     } else if (e.target.name === "type") {
       order.type = e.target.value;
     } else if (e.target.name === "quantity") {
@@ -90,6 +97,16 @@ const Subscribe = () => {
       order.frequency = e.target.value;
     }
     setUserOrder(order);
+  };
+
+  const resetOrder = () => {
+    setUserOrder({
+      method: "_____",
+      type: "_____",
+      quantity: "_____",
+      grind: "_____",
+      frequency: "______",
+    });
   };
 
   const openModal = () => {
@@ -159,6 +176,8 @@ const Subscribe = () => {
       </section>
       <form className="order-form container grid" onChange={handleOrderChange}>
         <FormElement
+          questionDisabled={false}
+          initialActiveState={true}
           labelClasses="answer"
           question="How do you drink your coffee?"
           questionName="method"
@@ -170,6 +189,8 @@ const Subscribe = () => {
           thirdAnswerValue="Espresso"
         />
         <FormElement
+          questionDisabled={false}
+          initialActiveState={false}
           labelClasses="answer"
           question="What type of coffee?"
           questionName="type"
@@ -181,6 +202,7 @@ const Subscribe = () => {
           thirdAnswerValue="Blended"
         />
         <FormElement
+          initialActiveState={false}
           labelClasses="answer"
           question="How much would you like?"
           questionName="quantity"
@@ -192,6 +214,8 @@ const Subscribe = () => {
           thirdAnswerValue="1000g"
         />
         <FormElement
+          questionDisabled={disableGrind}
+          initialActiveState={false}
           labelClasses="answer"
           question="Want us to grind them?"
           questionName="grind"
@@ -203,6 +227,8 @@ const Subscribe = () => {
           thirdAnswerValue="Cafetiére"
         />
         <FormElement
+          questionDisabled={false}
+          initialActiveState={false}
           labelClasses="answer"
           question="How often should we deliver?"
           questionName="frequency"
@@ -308,7 +334,13 @@ const Subscribe = () => {
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.
           </p>
-          <button className="create-button" onClick={closeModal}>
+          <button
+            className="create-button"
+            onClick={() => {
+              closeModal();
+              resetOrder();
+            }}
+          >
             ${totalCost}/month Checkout
           </button>
         </section>
