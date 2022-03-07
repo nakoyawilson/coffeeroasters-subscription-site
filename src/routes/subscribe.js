@@ -1,4 +1,31 @@
+import { useState } from "react";
+import Modal from "react-modal";
+
 const Subscribe = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  // const customStyles = {
+  //   content: {
+  //     backgroundColor: "rgba(0, 0, 0, 0.5)",
+  //     top: "50%",
+  //     left: "50%",
+  //     right: "auto",
+  //     bottom: "auto",
+  //     marginRight: "-50%",
+  //     transform: "translate(-50%, -50%)",
+  //   },
+  // };
+
+  Modal.setAppElement("#root");
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <main>
       <section className="subscribe-hero container">
@@ -53,6 +80,7 @@ const Subscribe = () => {
           <li>05 Deliveries</li>
         </ol>
       </section>
+      <form></form>
       How do you drink your coffee? Capsule Compatible with Nespresso systems
       and similar brewers Filter For pour over or drip methods like Aeropress,
       Chemex, and V60 Espresso Dense and finely ground beans for an intense,
@@ -78,14 +106,33 @@ const Subscribe = () => {
             _____, sent to me _____.”
           </p>
         </div>
-        <button className="create-button">Create my plan!</button>
+        <button className="create-button" onClick={openModal}>
+          Create my plan!
+        </button>
       </section>
-      {/* Modal */}
-      Order Summary “I drink coffee _____, with a _____ type of bean. _____
-      ground ala _____, sent to me _____.” Is this correct? You can proceed to
-      checkout or go back to plan selection if something is off. Subscription
-      discount codes can also be redeemed at the checkout. $_____/month Checkout
-      {/* End modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        // style={customStyles}
+        contentLabel="Order Summary"
+      >
+        <section className="modal">
+          <h2 className="heading">Order Summary</h2>
+          <p className="summary-text">
+            “I drink coffee _____, with a _____ type of bean. _____ ground ala
+            _____, sent to me _____.”
+          </p>
+          <p className="confirmation">
+            Is this correct? You can proceed to checkout or go back to plan
+            selection if something is off. Subscription discount codes can also
+            be redeemed at the checkout.
+          </p>
+          <button className="create-button" onClick={closeModal}>
+            $_____/month Checkout
+          </button>
+        </section>
+      </Modal>
     </main>
   );
 };
