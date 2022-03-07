@@ -23,7 +23,7 @@ const FormElement = (props) => {
         <img
           src="assets/plan/desktop/icon-arrow.svg"
           alt=""
-          className={isActive ? "question-expanded" : ""}
+          className={`arrow-icon ${isActive ? "question-expanded" : ""}`}
         />
       </button>
       {isActive && (

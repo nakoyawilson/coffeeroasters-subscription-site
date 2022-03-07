@@ -13,6 +13,7 @@
   --light-cream-transparent: rgba(254, 252, 247, 0.8);
   /* --dark-cream: rgb(3, 2, 0); */
   --grey: rgb(131, 136, 143);
+  --light-grey: rgba(226, 222, 219, 1);
   --white: rgb(255, 255, 255);
   --white-transparent: rgba(255, 255, 255, 0.5);
   --font-gradient: -webkit-linear-gradient(
@@ -91,14 +92,14 @@ label {
 }
 
 .visually-hidden {
-  /* border: 0;
+  border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px; */
+  width: 1px;
 }
 
 /* Header */
@@ -541,8 +542,13 @@ label {
   color: var(--grey);
 }
 
+.arrow-icon {
+  transition: 500ms;
+}
+
 .question-expanded {
   transform: rotate(180deg);
+  transition: 500ms;
 }
 
 .disabled-button {
@@ -612,6 +618,10 @@ label {
 .order-summary .create-button {
   margin-top: 5.6rem;
   padding: 1.5rem 3.55rem 1.6rem;
+}
+
+.create-button.subscribe-disabled {
+  background-color: var(--light-grey);
 }
 
 /* Modal */

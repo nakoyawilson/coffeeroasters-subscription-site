@@ -13,6 +13,7 @@ const Subscribe = () => {
   });
   const [totalCost, setTotalCost] = useState("0.00");
   const [disableGrind, setDisableGrind] = useState(false);
+  const [subscribeDisabled, setSubscribeDisabled] = useState(true);
 
   Modal.setAppElement("#root");
 
@@ -95,6 +96,14 @@ const Subscribe = () => {
     } else if (e.target.name === "frequency") {
       order.frequency = e.target.value;
     }
+    if (
+      order.method !== "_____" &&
+      order.type !== "_____" &&
+      order.quantity !== "_____" &&
+      order.frequency !== "_____"
+    ) {
+      setSubscribeDisabled(false);
+    }
     setUserOrder(order);
   };
 
@@ -106,6 +115,7 @@ const Subscribe = () => {
       grind: "_____",
       frequency: "______",
     });
+    setSubscribeDisabled(true);
   };
 
   const openModal = () => {
@@ -291,7 +301,13 @@ const Subscribe = () => {
             <span className="user-option">{userOrder.frequency}</span>.”
           </p>
         </div>
-        <button className="create-button" onClick={openModal}>
+        <button
+          className={`create-button ${
+            subscribeDisabled ? "subscribe-disabled" : ""
+          }`}
+          onClick={openModal}
+          disabled={subscribeDisabled}
+        >
           Create my plan!
         </button>
       </section>
