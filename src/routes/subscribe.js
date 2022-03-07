@@ -29,10 +29,12 @@ const Subscribe = () => {
 
   const openModal = () => {
     setModalIsOpen(true);
+    document.querySelector("body").classList.toggle("lock-scroll");
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
+    document.querySelector("body").classList.toggle("lock-scroll");
   };
 
   return (
