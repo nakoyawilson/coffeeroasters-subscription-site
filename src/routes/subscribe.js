@@ -4,19 +4,28 @@ import Modal from "react-modal";
 const Subscribe = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  // const customStyles = {
-  //   content: {
-  //     backgroundColor: "rgba(0, 0, 0, 0.5)",
-  //     top: "50%",
-  //     left: "50%",
-  //     right: "auto",
-  //     bottom: "auto",
-  //     marginRight: "-50%",
-  //     transform: "translate(-50%, -50%)",
-  //   },
-  // };
-
   Modal.setAppElement("#root");
+
+  const customStyles = {
+    content: {
+      position: "absolute",
+      width: "min(87.2%, 32.7rem)",
+      top: "3.5rem",
+      left: "0",
+      right: "0",
+      marginLeft: "auto",
+      marginRight: "auto",
+      border: "none",
+      background: "var(--light-cream)",
+      overflow: "auto",
+      WebkitOverflowScrolling: "touch",
+      borderRadius: "8px",
+      outline: "none",
+      padding: "0",
+    },
+  };
+
+  Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -114,7 +123,7 @@ const Subscribe = () => {
         isOpen={modalIsOpen}
         // onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        // style={customStyles}
+        style={customStyles}
         contentLabel="Order Summary"
       >
         <section className="modal">
