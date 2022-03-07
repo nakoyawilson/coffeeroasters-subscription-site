@@ -67,6 +67,10 @@ address {
   font-style: normal;
 }
 
+label {
+  display: block;
+}
+
 .container {
   width: min(87.2%, 32.7rem);
 }
@@ -84,6 +88,17 @@ address {
 
 .grid {
   display: grid;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* Header */
@@ -490,6 +505,69 @@ address {
   line-height: 2.5rem;
   color: var(--white);
   margin-top: 2.4rem;
+}
+
+/* Order */
+
+.order-options {
+  display: none;
+}
+
+.order-form {
+  width: min(87.5%, 32.8rem);
+  margin: 12rem auto 0;
+  grid-template-columns: 1fr;
+  gap: 9.6rem;
+}
+
+.order-option {
+  text-align: left;
+}
+
+.question-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.question {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: var(--grey);
+}
+
+.answers {
+  margin-top: 3.2rem;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+
+.answer-value {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.answer {
+  display: block;
+  background: #f4f1eb;
+  border-radius: 8px;
+  padding: 2.4rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.checked-option {
+  background-color: var(--dark-cyan);
+  color: var(--white);
 }
 
 /* Order Summary */

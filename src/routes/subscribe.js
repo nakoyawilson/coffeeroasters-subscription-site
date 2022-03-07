@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormElement from "../components/FormElement";
 import Modal from "react-modal";
 
 const Subscribe = () => {
@@ -47,9 +48,9 @@ const Subscribe = () => {
           fresh to your door.
         </p>
       </section>
-      <section class="steps grid">
+      <section className="steps grid">
         <div>
-          <h2 class="subheading">
+          <h2 className="subheading">
             <span className="subheading-index">01</span>
             Pick your coffee
           </h2>
@@ -83,7 +84,7 @@ const Subscribe = () => {
         </div>
       </section>
       <section>
-        <ol>
+        <ol className="order-options">
           <li>01 Preferences</li>
           <li>02 Bean type</li>
           <li>03 Quantity</li>
@@ -91,24 +92,63 @@ const Subscribe = () => {
           <li>05 Deliveries</li>
         </ol>
       </section>
-      <form></form>
-      How do you drink your coffee? Capsule Compatible with Nespresso systems
-      and similar brewers Filter For pour over or drip methods like Aeropress,
-      Chemex, and V60 Espresso Dense and finely ground beans for an intense,
-      flavorful experience What type of coffee? Single origin Distinct, high
-      quality coffee from a specific family-owned farm Decaf Just like regular
-      coffee, except the caffeine has been removed Blended Combination of two or
-      three dark roasted beans of organic coffees How much would you like? 250g
-      Perfect for the solo drinker. Yields about 12 delicious cups. 500g Perfect
-      option for a couple. Yields about 40 delectable cups. 1000g Perfect for
-      offices and events. Yields about 90 delightful cups. Want us to grind
-      them? Wholebean Best choice if you cherish the full sensory experience
-      Filter For drip or pour-over coffee methods such as V60 or Aeropress
-      Cafetiére Course ground beans specially suited for french press coffee How
-      often should we deliver? Every week $14.00 per shipment. Includes free
-      first-class shipping. Every 2 weeks $17.25 per shipment. Includes free
-      priority shipping. Every month $22.50 per shipment. Includes free priority
-      shipping.
+      <form className="order-form container grid">
+        <FormElement
+          labelClasses="answer"
+          question="How do you drink your coffee?"
+          questionName="method"
+          firstAnswer="Compatible with Nespresso systems and similar brewers"
+          firstAnswerValue="Capsule"
+          secondAnswer="For pour over or drip methods like Aeropress, Chemex, and V60"
+          secondAnswerValue="Filter"
+          thirdAnswer="Dense and finely ground beans for an intense, flavorful experience"
+          thirdAnswerValue="Espresso"
+        />
+        <FormElement
+          labelClasses="answer"
+          question="What type of coffee?"
+          questionName="type"
+          firstAnswer="Distinct, high quality coffee from a specific family-owned farm"
+          firstAnswerValue="Single origin"
+          secondAnswer="Just like regular coffee, except the caffeine has been removed"
+          secondAnswerValue="Decaf"
+          thirdAnswer="Combination of two or three dark roasted beans of organic coffees"
+          thirdAnswerValue="Blended"
+        />
+        <FormElement
+          labelClasses="answer"
+          question="How much would you like?"
+          questionName="quantity"
+          firstAnswer="Perfect for the solo drinker. Yields about 12 delicious cups."
+          firstAnswerValue="250g"
+          secondAnswer="Perfect option for a couple. Yields about 40 delectable cups."
+          secondAnswerValue="500g"
+          thirdAnswer="Perfect for offices and events. Yields about 90 delightful cups."
+          thirdAnswerValue="1000g"
+        />
+        <FormElement
+          labelClasses="answer"
+          question="Want us to grind them?"
+          questionName="grind"
+          firstAnswer="Best choice if you cherish the full sensory experience"
+          firstAnswerValue="Wholebean"
+          secondAnswer="For drip or pour-over coffee methods such as V60 or Aeropress"
+          secondAnswerValue="Filter"
+          thirdAnswer="Course ground beans specially suited for french press coffee"
+          thirdAnswerValue="Cafetiére"
+        />
+        <FormElement
+          labelClasses="answer"
+          question="How often should we deliver?"
+          questionName="frequency"
+          firstAnswer="$14.00 per shipment. Includes free first-class shipping."
+          firstAnswerValue="Every week"
+          secondAnswer="$17.25 per shipment. Includes free priority shipping."
+          secondAnswerValue="Every 2 weeks"
+          thirdAnswer="$22.50 per shipment. Includes free priority shipping."
+          thirdAnswerValue="Every month"
+        />
+      </form>
       <section className="order-summary">
         <div className="container">
           <h2 className="summary-heading">Order Summary</h2>

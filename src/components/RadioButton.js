@@ -6,8 +6,11 @@ const RadioButton = (props) => {
         name={props.questionName}
         id={props.answerId}
         value={props.answerValue}
+        className="visually-hidden"
       />
-      {props.answer}
+
+      <h3 className="answer-value">{props.answerValue}</h3>
+      <span>{props.answer}</span>
     </label>
   );
 };
