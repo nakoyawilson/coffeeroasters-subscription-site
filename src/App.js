@@ -4,11 +4,15 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App">
       <Header />
-      <Outlet />
-      <Footer />
+      <Outlet context={scrollToTop} />
+      <Footer scrollToTop={scrollToTop} />
     </div>
   );
 }

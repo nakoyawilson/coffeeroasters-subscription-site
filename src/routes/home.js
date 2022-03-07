@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
 const Home = () => {
+  const scrollToTop = useOutletContext();
+
   return (
     <main>
       <section className="container home-hero">
@@ -10,7 +12,7 @@ const Home = () => {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <Link to="/plan" className="create-button">
+        <Link to="/subscribe" className="create-button" onClick={scrollToTop}>
           Create your plan
         </Link>
       </section>
@@ -150,7 +152,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <Link to="/plan" className="create-button">
+        <Link to="/subscribe" className="create-button" onClick={scrollToTop}>
           Create your plan
         </Link>
       </section>

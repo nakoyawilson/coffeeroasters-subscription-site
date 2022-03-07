@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className="footer container">
       <svg
@@ -23,17 +23,21 @@ const Footer = () => {
       </svg>
       <ul className="footer-links">
         <li>
-          <Link to="/" className="footer-link">
+          <Link to="/" className="footer-link" onClick={props.scrollToTop}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about" className="footer-link">
+          <Link to="/about" className="footer-link" onClick={props.scrollToTop}>
             About us
           </Link>
         </li>
         <li>
-          <Link to="/subscribe" className="footer-link">
+          <Link
+            to="/subscribe"
+            className="footer-link"
+            onClick={props.scrollToTop}
+          >
             Create your plan
           </Link>
         </li>

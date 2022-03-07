@@ -78,7 +78,6 @@ const Subscribe = () => {
   };
 
   const handleOrderChange = (e) => {
-    e.preventDefault();
     const order = { ...userOrder };
     if (e.target.name === "method") {
       order.method = e.target.value;
