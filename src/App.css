@@ -570,6 +570,10 @@ label {
   color: var(--white);
 }
 
+.user-option {
+  color: var(--dark-cyan);
+}
+
 /* Order Summary */
 
 .order-summary .container {

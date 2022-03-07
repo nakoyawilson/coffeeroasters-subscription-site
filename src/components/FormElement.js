@@ -1,6 +1,9 @@
+import { useState } from "react";
 import RadioButton from "./RadioButton";
 
 const FormElement = (props) => {
+  const [checkedIndex, setCheckedIndex] = useState(false);
+
   return (
     <div className="order-option">
       <button className="question-wrapper">
@@ -14,6 +17,10 @@ const FormElement = (props) => {
           answerId={props.firstAnswerValue}
           answerValue={props.firstAnswerValue}
           answer={props.firstAnswer}
+          isChecked={checkedIndex === 0}
+          handleChange={() => {
+            setCheckedIndex(0);
+          }}
         />
         <RadioButton
           labelClasses={props.labelClasses}
@@ -21,6 +28,10 @@ const FormElement = (props) => {
           answerId={props.secondAnswerValue}
           answerValue={props.secondAnswerValue}
           answer={props.secondAnswer}
+          isChecked={checkedIndex === 1}
+          handleChange={() => {
+            setCheckedIndex(1);
+          }}
         />
         <RadioButton
           labelClasses={props.labelClasses}
@@ -28,6 +39,10 @@ const FormElement = (props) => {
           answerId={props.thirdAnswerValue}
           answerValue={props.thirdAnswerValue}
           answer={props.thirdAnswer}
+          isChecked={checkedIndex === 2}
+          handleChange={() => {
+            setCheckedIndex(2);
+          }}
         />
       </div>
     </div>

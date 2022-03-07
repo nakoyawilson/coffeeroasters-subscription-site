@@ -4,6 +4,14 @@ import Modal from "react-modal";
 
 const Subscribe = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [userOrder, setUserOrder] = useState({
+    method: "_____",
+    type: "_____",
+    quantity: "_____",
+    grind: "_____",
+    frequency: "______",
+  });
+  const [totalCost, setTotalCost] = useState("0.00");
 
   Modal.setAppElement("#root");
 
@@ -28,7 +36,64 @@ const Subscribe = () => {
 
   Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
+  const calculateCost = () => {
+    let price, multiplcationFactor, calculatedCost;
+    if (userOrder.quantity === "250g") {
+      if (userOrder.frequency === "Every week") {
+        price = 7.2;
+        multiplcationFactor = 4;
+      } else if (userOrder.frequency === "Every 2 weeks") {
+        price = 9.6;
+        multiplcationFactor = 2;
+      } else if (userOrder.frequency === "Every month") {
+        price = 12.0;
+        multiplcationFactor = 1;
+      }
+    } else if (userOrder.quantity === "500g") {
+      if (userOrder.frequency === "Every week") {
+        price = 13.0;
+        multiplcationFactor = 4;
+      } else if (userOrder.frequency === "Every 2 weeks") {
+        price = 17.5;
+        multiplcationFactor = 2;
+      } else if (userOrder.frequency === "Every month") {
+        price = 22.0;
+        multiplcationFactor = 1;
+      }
+    } else if (userOrder.quantity === "1000g") {
+      if (userOrder.frequency === "Every week") {
+        price = 22.0;
+        multiplcationFactor = 4;
+      } else if (userOrder.frequency === "Every 2 weeks") {
+        price = 32.0;
+        multiplcationFactor = 2;
+      } else if (userOrder.frequency === "Every month") {
+        price = 42.0;
+        multiplcationFactor = 1;
+      }
+    }
+    calculatedCost = price * multiplcationFactor;
+    setTotalCost(calculatedCost.toFixed(2));
+  };
+
+  const handleOrderChange = (e) => {
+    const order = { ...userOrder };
+    if (e.target.name === "method") {
+      order.method = e.target.value;
+    } else if (e.target.name === "type") {
+      order.type = e.target.value;
+    } else if (e.target.name === "quantity") {
+      order.quantity = e.target.value;
+    } else if (e.target.name === "grind") {
+      order.grind = e.target.value;
+    } else if (e.target.name === "frequency") {
+      order.frequency = e.target.value;
+    }
+    setUserOrder(order);
+  };
+
   const openModal = () => {
+    calculateCost();
     setModalIsOpen(true);
     document.querySelector("body").classList.toggle("lock-scroll");
   };
@@ -92,7 +157,7 @@ const Subscribe = () => {
           <li>05 Deliveries</li>
         </ol>
       </section>
-      <form className="order-form container grid">
+      <form className="order-form container grid" onChange={handleOrderChange}>
         <FormElement
           labelClasses="answer"
           question="How do you drink your coffee?"
@@ -109,7 +174,7 @@ const Subscribe = () => {
           question="What type of coffee?"
           questionName="type"
           firstAnswer="Distinct, high quality coffee from a specific family-owned farm"
-          firstAnswerValue="Single origin"
+          firstAnswerValue="Single Origin"
           secondAnswer="Just like regular coffee, except the caffeine has been removed"
           secondAnswerValue="Decaf"
           thirdAnswer="Combination of two or three dark roasted beans of organic coffees"
@@ -141,11 +206,35 @@ const Subscribe = () => {
           labelClasses="answer"
           question="How often should we deliver?"
           questionName="frequency"
-          firstAnswer="$14.00 per shipment. Includes free first-class shipping."
+          firstAnswer={`${
+            userOrder.quantity === ""
+              ? ""
+              : userOrder.quantity === "250g"
+              ? "$7.20"
+              : userOrder.quantity === "500g"
+              ? "$13.00"
+              : "$22.00"
+          } per shipment. Includes free first-class shipping.`}
           firstAnswerValue="Every week"
-          secondAnswer="$17.25 per shipment. Includes free priority shipping."
+          secondAnswer={`${
+            userOrder.quantity === ""
+              ? ""
+              : userOrder.quantity === "250g"
+              ? "$9.60"
+              : userOrder.quantity === "500g"
+              ? "$17.50"
+              : "$32.00"
+          } per shipment. Includes free priority shipping.`}
           secondAnswerValue="Every 2 weeks"
-          thirdAnswer="$22.50 per shipment. Includes free priority shipping."
+          thirdAnswer={`${
+            userOrder.quantity === ""
+              ? ""
+              : userOrder.quantity === "250g"
+              ? "$12.00"
+              : userOrder.quantity === "500g"
+              ? "$22.00"
+              : "$42.00"
+          } per shipment. Includes free priority shipping.`}
           thirdAnswerValue="Every month"
         />
       </form>
@@ -153,8 +242,28 @@ const Subscribe = () => {
         <div className="container">
           <h2 className="summary-heading">Order Summary</h2>
           <p className="summary-text">
-            “I drink coffee _____, with a _____ type of bean. _____ ground ala
-            _____, sent to me _____.”
+            “I drink my coffee{" "}
+            {userOrder.method === "Capsule"
+              ? "using "
+              : userOrder.method === "Filter" || userOrder.method === "Espresso"
+              ? "as "
+              : ""}
+            <span className="user-option">
+              {userOrder.method === "Capsule" ? "Capsules" : userOrder.method}
+            </span>
+            , with a <span className="user-option">{userOrder.type}</span> type
+            of bean. <span className="user-option">{userOrder.quantity}</span>
+            {userOrder.method === "Capsule" || userOrder.method === "" ? (
+              ""
+            ) : (
+              <span>
+                {" "}
+                ground ala{" "}
+                <span className="user-option">{userOrder.grind}</span>
+              </span>
+            )}
+            , sent to me{" "}
+            <span className="user-option">{userOrder.frequency}</span>.”
           </p>
         </div>
         <button className="create-button" onClick={openModal}>
@@ -171,8 +280,28 @@ const Subscribe = () => {
         <section className="modal">
           <h2 className="heading">Order Summary</h2>
           <p className="summary-text">
-            “I drink coffee _____, with a _____ type of bean. _____ ground ala
-            _____, sent to me _____.”
+            “I drink my coffee{" "}
+            {userOrder.method === "Capsule"
+              ? "using "
+              : userOrder.method === "Filter" || userOrder.method === "Espresso"
+              ? "as "
+              : ""}
+            <span className="user-option">
+              {userOrder.method === "Capsule" ? "Capsules" : userOrder.method}
+            </span>
+            , with a <span className="user-option">{userOrder.type}</span> type
+            of bean. <span className="user-option">{userOrder.quantity}</span>
+            {userOrder.method === "Capsule" || userOrder.method === "" ? (
+              ""
+            ) : (
+              <span>
+                {" "}
+                ground ala{" "}
+                <span className="user-option">{userOrder.grind}</span>
+              </span>
+            )}
+            , sent to me{" "}
+            <span className="user-option">{userOrder.frequency}</span>.”
           </p>
           <p className="confirmation">
             Is this correct? You can proceed to checkout or go back to plan
@@ -180,7 +309,7 @@ const Subscribe = () => {
             be redeemed at the checkout.
           </p>
           <button className="create-button" onClick={closeModal}>
-            $_____/month Checkout
+            ${totalCost}/month Checkout
           </button>
         </section>
       </Modal>
