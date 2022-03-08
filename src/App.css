@@ -1017,7 +1017,7 @@ label {
 
   .choose-us {
     margin: 20rem auto 0;
-    padding: 10rem 37rem 31.7rem;
+    padding: 10rem 0 31.7rem;
     border-radius: 10px;
     position: relative;
   }
@@ -1028,11 +1028,13 @@ label {
   }
 
   .choose-us .paragraph {
+    margin: 3.2rem auto 0;
+    width: 54rem;
     padding: 0 0.6rem;
   }
 
   .choose-us .grid {
-    width: 111.1rem;
+    width: min(86.7%, 111rem);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     top: 34.6rem;
@@ -1053,6 +1055,7 @@ label {
 
   .reason .paragraph {
     margin-top: 2.4rem;
+    width: auto;
     padding: 0;
     text-align: center;
   }
@@ -1061,7 +1064,7 @@ label {
 
   .how-it-works {
     margin: 35.1rem auto 0;
-    width: 111rem;
+    width: min(86.7%, 111rem);
   }
 
   .how-it-works .grid {
