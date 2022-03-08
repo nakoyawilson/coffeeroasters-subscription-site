@@ -10,8 +10,10 @@ const Header = () => {
   };
 
   const closeMenu = () => {
-    setNavOpen(false);
-    document.querySelector("body").classList.toggle("lock-scroll");
+    if (window.innerWidth < 630) {
+      setNavOpen(false);
+      document.querySelector("body").classList.toggle("lock-scroll");
+    }
   };
 
   return (
