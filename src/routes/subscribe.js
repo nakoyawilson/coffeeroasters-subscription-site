@@ -9,10 +9,17 @@ const Subscribe = () => {
     type: "_____",
     quantity: "_____",
     grind: "_____",
-    frequency: "______",
+    frequency: "_____",
   });
   const [totalCost, setTotalCost] = useState("0.00");
   const [disableGrind, setDisableGrind] = useState(false);
+  const [activeStates, setActiveStates] = useState({
+    method: true,
+    type: false,
+    quantity: false,
+    grind: false,
+    frequency: false,
+  });
   const [subscribeDisabled, setSubscribeDisabled] = useState(true);
 
   Modal.setAppElement("#root");
@@ -82,7 +89,10 @@ const Subscribe = () => {
     const order = { ...userOrder };
     if (e.target.name === "method") {
       order.method = e.target.value;
+      const buttonStates = { ...activeStates };
       if (e.target.value === "Capsule") {
+        buttonStates.grind = false;
+        setActiveStates(buttonStates);
         setDisableGrind(true);
       } else {
         setDisableGrind(false);
@@ -113,9 +123,25 @@ const Subscribe = () => {
       type: "_____",
       quantity: "_____",
       grind: "_____",
-      frequency: "______",
+      frequency: "_____",
     });
     setSubscribeDisabled(true);
+  };
+
+  const handleAccordianClick = (e) => {
+    const buttonStates = { ...activeStates };
+    if (e.target.textContent.includes("How do you drink your coffee?")) {
+      buttonStates.method = !buttonStates.method;
+    } else if (e.target.textContent.includes("What type of coffee?")) {
+      buttonStates.type = !buttonStates.type;
+    } else if (e.target.textContent.includes("How much would you like?")) {
+      buttonStates.quantity = !buttonStates.quantity;
+    } else if (e.target.textContent.includes("Want us to grind them?")) {
+      buttonStates.grind = !buttonStates.grind;
+    } else if (e.target.textContent.includes("How often should we deliver?")) {
+      buttonStates.frequency = !buttonStates.frequency;
+    }
+    setActiveStates(buttonStates);
   };
 
   const openModal = () => {
@@ -185,8 +211,9 @@ const Subscribe = () => {
       </section>
       <form className="order-form container grid" onChange={handleOrderChange}>
         <FormElement
+          handleClick={handleAccordianClick}
           questionDisabled={false}
-          initialActiveState={true}
+          isActive={activeStates.method}
           labelClasses="answer"
           question="How do you drink your coffee?"
           questionName="method"
@@ -198,8 +225,9 @@ const Subscribe = () => {
           thirdAnswerValue="Espresso"
         />
         <FormElement
+          handleClick={handleAccordianClick}
           questionDisabled={false}
-          initialActiveState={false}
+          isActive={activeStates.type}
           labelClasses="answer"
           question="What type of coffee?"
           questionName="type"
@@ -211,7 +239,9 @@ const Subscribe = () => {
           thirdAnswerValue="Blended"
         />
         <FormElement
-          initialActiveState={false}
+          handleClick={handleAccordianClick}
+          questionDisabled={false}
+          isActive={activeStates.quantity}
           labelClasses="answer"
           question="How much would you like?"
           questionName="quantity"
@@ -223,8 +253,9 @@ const Subscribe = () => {
           thirdAnswerValue="1000g"
         />
         <FormElement
+          handleClick={handleAccordianClick}
           questionDisabled={disableGrind}
-          initialActiveState={false}
+          isActive={activeStates.grind}
           labelClasses="answer"
           question="Want us to grind them?"
           questionName="grind"
@@ -236,8 +267,9 @@ const Subscribe = () => {
           thirdAnswerValue="Cafetiére"
         />
         <FormElement
+          handleClick={handleAccordianClick}
           questionDisabled={false}
-          initialActiveState={false}
+          isActive={activeStates.frequency}
           labelClasses="answer"
           question="How often should we deliver?"
           questionName="frequency"

@@ -3,11 +3,6 @@ import RadioButton from "./RadioButton";
 
 const FormElement = (props) => {
   const [checkedIndex, setCheckedIndex] = useState(false);
-  const [isActive, setIsActive] = useState(props.initialActiveState);
-
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
 
   return (
     <div className="order-option">
@@ -16,17 +11,18 @@ const FormElement = (props) => {
         className={`question-wrapper ${
           props.questionDisabled ? "disabled-button" : ""
         }`}
-        onClick={handleClick}
+        onClick={props.handleClick}
         disabled={props.questionDisabled}
+        value={props.questionName}
       >
         <h2 className="question">{props.question}</h2>
         <img
           src="assets/plan/desktop/icon-arrow.svg"
           alt=""
-          className={`arrow-icon ${isActive ? "question-expanded" : ""}`}
+          className={`arrow-icon ${props.isActive ? "question-expanded" : ""}`}
         />
       </button>
-      {isActive && (
+      {props.isActive && (
         <div className="answers grid">
           <RadioButton
             labelClasses={props.labelClasses}
