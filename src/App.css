@@ -723,9 +723,11 @@ label {
   }
 
   .nav-links {
+    width: 28.2rem;
     display: flex;
     flex-direction: row;
-    gap: 3.2rem;
+    justify-content: space-between;
+    gap: 0;
     margin-top: 0;
   }
 
@@ -745,9 +747,7 @@ label {
   /* Hero Section */
   .home-hero {
     background-image: url("../public/assets/home/tablet/image-hero-coffeepress.jpg");
-    border-radius: 10px;
     padding: 10.4rem 5.8rem;
-    margin: 0 auto;
   }
 
   .home-hero .content-wrapper {
@@ -771,6 +771,7 @@ label {
   }
 
   .collection .heading {
+    font-size: 9.6rem;
     font-size: 9.6rem;
     margin-bottom: 0;
     text-align: center;
@@ -807,11 +808,8 @@ label {
   /* Why Choose Us */
 
   .choose-us {
-    background: var(--dark-grey);
-    color: var(--light-cream);
     margin: 12rem auto 0;
     padding: 5.6rem 7.4rem 36.8rem;
-    border-radius: 10px;
     position: relative;
   }
 
@@ -914,7 +912,6 @@ label {
   /* Footer */
 
   .footer {
-    background: var(--dark-grey);
     margin: 14.4rem auto 7.2rem;
     text-align: center;
   }
@@ -926,5 +923,202 @@ label {
     justify-content: space-between;
     gap: 0;
     margin: 3.2rem auto 6.5rem;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  /* General Styles */
+  .container {
+    width: min(88.89%, 128rem);
+  }
+
+  .paragraph {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  /* Header */
+
+  .header {
+    margin: 4.356rem auto 4.344rem;
+  }
+
+  /* Navigation */
+
+  .nav-links {
+    width: 28.3rem;
+  }
+
+  /* Home Page */
+
+  /* Hero Section */
+  .home-hero {
+    background-image: url("../public/assets/home/desktop/image-hero-coffeepress.jpg");
+    padding: 11.7rem 8.5rem 13.2rem;
+  }
+
+  .home-hero .content-wrapper {
+    width: 49.3rem;
+  }
+
+  .home-hero .heading {
+    color: var(--light-cream);
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  .home-hero .paragraph {
+    margin: 3.2rem 0 5.6rem;
+    padding-right: 5rem;
+  }
+
+  /* Our Collection */
+
+  .collection {
+    margin-top: 22.2rem;
+  }
+
+  .collection .heading {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+
+  .collection .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    width: 111.1rem;
+    margin: 0 auto;
+    top: -2.5rem;
+  }
+
+  .collection-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 7.155rem;
+    text-align: center;
+  }
+
+  .collection-image {
+    width: 25.5rem;
+  }
+
+  .collection-wrapper .content-wrapper {
+    margin-top: 2.955rem;
+  }
+
+  .collection .paragraph {
+    width: auto;
+    margin: 2.4rem 0 0;
+  }
+
+  /* Why Choose Us */
+
+  .choose-us {
+    margin: 20rem auto 0;
+    padding: 10rem 37rem 31.7rem;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .choose-us .heading {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .choose-us .paragraph {
+    padding: 0 0.6rem;
+  }
+
+  .choose-us .grid {
+    width: 111.1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    top: 34.6rem;
+  }
+
+  .reason {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.6rem;
+    padding: 7.2rem 4.8rem 4.8rem 4.7rem;
+    text-align: center;
+  }
+
+  .reason-image {
+    width: 7.2rem;
+  }
+
+  .reason .paragraph {
+    margin-top: 2.4rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* How It Works */
+
+  .how-it-works {
+    margin: 35.1rem auto 0;
+    width: 111rem;
+  }
+
+  .how-it-works .grid {
+    width: 100%;
+    gap: 9.5rem;
+    margin: 17.8rem 0 6.4rem;
+  }
+
+  .how-steps {
+    position: relative;
+  }
+
+  .how-steps::after {
+    top: -9.6rem;
+  }
+
+  .how-steps::before {
+    width: 125%;
+    top: -8.2rem;
+    left: 2rem;
+  }
+
+  .how-steps:nth-child(3)::before {
+    content: none;
+  }
+
+  .how-it-works .subheading {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    margin-bottom: 4.3rem;
+    padding-right: 5rem;
+  }
+
+  .subheading-index {
+    margin-bottom: 3.8rem;
+  }
+
+  .how-it-works .paragraph {
+    padding-right: 2.5rem;
+  }
+
+  /* Footer */
+
+  .footer {
+    margin: 20rem auto 8.8rem;
+    padding: 4.7rem 8.5rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 10.29rem;
+  }
+
+  .footer-links {
+    margin: 0;
+  }
+
+  .social-icons {
+    justify-content: end;
   }
 }
