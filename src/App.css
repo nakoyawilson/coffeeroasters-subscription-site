@@ -870,6 +870,35 @@ label {
     margin: 11.9rem 0 4.4rem;
   }
 
+  .how-steps {
+    position: relative;
+  }
+
+  .how-steps::after {
+    content: "";
+    width: 3.1rem;
+    height: 3.1rem;
+    background-color: var(--light-cream);
+    border: 2px solid var(--dark-cyan);
+    border-radius: 50%;
+    position: absolute;
+    top: -7.7rem;
+    left: 0;
+  }
+
+  .how-steps::before {
+    content: "";
+    width: 100%;
+    border-top: 2px solid var(--pale-orange);
+    position: absolute;
+    top: -6.2rem;
+    left: 2rem;
+  }
+
+  .how-steps:nth-child(3)::before {
+    content: none;
+  }
+
   .how-it-works .subheading {
     margin-bottom: 3.8rem;
   }

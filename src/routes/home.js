@@ -134,7 +134,7 @@ const Home = () => {
       <section className="how-it-works">
         <h2 className="heading">How it works</h2>
         <div className="grid container">
-          <div>
+          <div className="how-steps">
             <h3 className="subheading">
               <span className="subheading-index">01</span>
               Pick your coffee
@@ -145,7 +145,7 @@ const Home = () => {
               coffees in all profiles every month for you to try out.
             </p>
           </div>
-          <div>
+          <div className="how-steps">
             <h3 className="subheading">
               <span className="subheading-index">02</span>
               Choose the frequency
@@ -156,7 +156,7 @@ const Home = () => {
               commitment through our online portal.
             </p>
           </div>
-          <div>
+          <div className="how-steps">
             <h3 className="subheading">
               <span className="subheading-index">03</span>
               Receive and enjoy!
