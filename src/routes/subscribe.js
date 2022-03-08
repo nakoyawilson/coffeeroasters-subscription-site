@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import FormElement from "../components/FormElement";
 import Modal from "react-modal";
 
 const Subscribe = () => {
+  const scrollToTop = useOutletContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [userOrder, setUserOrder] = useState({
     method: "_____",
@@ -115,17 +117,6 @@ const Subscribe = () => {
       setSubscribeDisabled(false);
     }
     setUserOrder(order);
-  };
-
-  const resetOrder = () => {
-    setUserOrder({
-      method: "_____",
-      type: "_____",
-      quantity: "_____",
-      grind: "_____",
-      frequency: "_____",
-    });
-    setSubscribeDisabled(true);
   };
 
   const handleAccordianClick = (e) => {
@@ -384,8 +375,8 @@ const Subscribe = () => {
           <button
             className="create-button"
             onClick={() => {
-              closeModal();
-              resetOrder();
+              window.location.reload();
+              scrollToTop();
             }}
           >
             ${totalCost}/month Checkout
