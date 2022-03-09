@@ -329,6 +329,11 @@ label {
   margin-bottom: 2.4rem;
 }
 
+.how-it-works .create-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* About Us Page */
 
 /* Hero Section */
@@ -908,6 +913,11 @@ label {
 
   .how-it-works .paragraph {
     padding-right: 1.2rem;
+  }
+
+  .how-it-works .create-button {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* About Us Page */
