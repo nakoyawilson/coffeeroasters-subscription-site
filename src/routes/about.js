@@ -17,11 +17,11 @@ const About = () => {
             srcset="assets/about/mobile/image-commitment.jpg"
           />
           <source
-            media="(min-width: 630px)"
+            media="(max-width: 1309px)"
             srcset="assets/about/tablet/image-commitment.jpg"
           />
           <source
-            media="(min-width: 1150px)"
+            media="(min-width: 1310px)"
             srcset="assets/about/desktop/image-commitment.jpg"
           />
           <img
