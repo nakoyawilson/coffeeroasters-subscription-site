@@ -29,8 +29,7 @@ const Subscribe = () => {
   const customStyles = {
     content: {
       position: "absolute",
-      width:
-        window.innerWidth < 630 ? "min(87.2%, 32.7rem)" : "min(70.3%, 540rem)",
+      width: window.innerWidth < 630 ? "min(87.2%, 32.7rem)" : "54rem",
       top: window.innerWidth < 630 ? "3.5rem" : "21.4rem",
       left: "0",
       right: "0",
@@ -194,148 +193,168 @@ const Subscribe = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="order-wrapper">
         <ol className="order-options">
-          <li>01 Preferences</li>
-          <li>02 Bean type</li>
-          <li>03 Quantity</li>
-          <li>04 Grind option</li>
-          <li>05 Deliveries</li>
+          <li className="option">
+            <span className="option-index default-open">01</span>{" "}
+            <span>Preferences</span>
+          </li>
+          <li className="option">
+            <span className="option-index">02</span> <span>Bean type</span>
+          </li>
+          <li className="option">
+            <span className="option-index">03</span> <span>Quantity</span>
+          </li>
+          <li className="option">
+            <span className="option-index">04</span> <span>Grind option</span>
+          </li>
+          <li className="option">
+            <span className="option-index">05</span> <span>Deliveries</span>
+          </li>
         </ol>
-      </section>
-      <form className="order-form container grid" onChange={handleOrderChange}>
-        <FormElement
-          handleClick={handleAccordianClick}
-          questionDisabled={false}
-          isActive={activeStates.method}
-          labelClasses="answer"
-          question="How do you drink your coffee?"
-          questionName="method"
-          firstAnswer="Compatible with Nespresso systems and similar brewers"
-          firstAnswerValue="Capsule"
-          secondAnswer="For pour over or drip methods like Aeropress, Chemex, and V60"
-          secondAnswerValue="Filter"
-          thirdAnswer="Dense and finely ground beans for an intense, flavorful experience"
-          thirdAnswerValue="Espresso"
-        />
-        <FormElement
-          handleClick={handleAccordianClick}
-          questionDisabled={false}
-          isActive={activeStates.type}
-          labelClasses="answer"
-          question="What type of coffee?"
-          questionName="type"
-          firstAnswer="Distinct, high quality coffee from a specific family-owned farm"
-          firstAnswerValue="Single Origin"
-          secondAnswer="Just like regular coffee, except the caffeine has been removed"
-          secondAnswerValue="Decaf"
-          thirdAnswer="Combination of two or three dark roasted beans of organic coffees"
-          thirdAnswerValue="Blended"
-        />
-        <FormElement
-          handleClick={handleAccordianClick}
-          questionDisabled={false}
-          isActive={activeStates.quantity}
-          labelClasses="answer"
-          question="How much would you like?"
-          questionName="quantity"
-          firstAnswer="Perfect for the solo drinker. Yields about 12 delicious cups."
-          firstAnswerValue="250g"
-          secondAnswer="Perfect option for a couple. Yields about 40 delectable cups."
-          secondAnswerValue="500g"
-          thirdAnswer="Perfect for offices and events. Yields about 90 delightful cups."
-          thirdAnswerValue="1000g"
-        />
-        <FormElement
-          handleClick={handleAccordianClick}
-          questionDisabled={disableGrind}
-          isActive={activeStates.grind}
-          labelClasses="answer"
-          question="Want us to grind them?"
-          questionName="grind"
-          firstAnswer="Best choice if you cherish the full sensory experience"
-          firstAnswerValue="Wholebean"
-          secondAnswer="For drip or pour-over coffee methods such as V60 or Aeropress"
-          secondAnswerValue="Filter"
-          thirdAnswer="Course ground beans specially suited for french press coffee"
-          thirdAnswerValue="Cafetiére"
-        />
-        <FormElement
-          handleClick={handleAccordianClick}
-          questionDisabled={false}
-          isActive={activeStates.frequency}
-          labelClasses="answer"
-          question="How often should we deliver?"
-          questionName="frequency"
-          firstAnswer={`${
-            userOrder.quantity === ""
-              ? ""
-              : userOrder.quantity === "250g"
-              ? "$7.20"
-              : userOrder.quantity === "500g"
-              ? "$13.00"
-              : "$22.00"
-          } per shipment. Includes free first-class shipping.`}
-          firstAnswerValue="Every week"
-          secondAnswer={`${
-            userOrder.quantity === ""
-              ? ""
-              : userOrder.quantity === "250g"
-              ? "$9.60"
-              : userOrder.quantity === "500g"
-              ? "$17.50"
-              : "$32.00"
-          } per shipment. Includes free priority shipping.`}
-          secondAnswerValue="Every 2 weeks"
-          thirdAnswer={`${
-            userOrder.quantity === ""
-              ? ""
-              : userOrder.quantity === "250g"
-              ? "$12.00"
-              : userOrder.quantity === "500g"
-              ? "$22.00"
-              : "$42.00"
-          } per shipment. Includes free priority shipping.`}
-          thirdAnswerValue="Every month"
-        />
-      </form>
-      <section className="order-summary">
-        <div className="container">
-          <h2 className="summary-heading">Order Summary</h2>
-          <p className="summary-text">
-            “I drink my coffee{" "}
-            {userOrder.method === "Capsule"
-              ? "using "
-              : userOrder.method === "Filter" || userOrder.method === "Espresso"
-              ? "as "
-              : ""}
-            <span className="user-option">
-              {userOrder.method === "Capsule" ? "Capsules" : userOrder.method}
-            </span>
-            , with a <span className="user-option">{userOrder.type}</span> type
-            of bean. <span className="user-option">{userOrder.quantity}</span>
-            {userOrder.method === "Capsule" || userOrder.method === "" ? (
-              ""
-            ) : (
-              <span>
-                {" "}
-                ground ala{" "}
-                <span className="user-option">{userOrder.grind}</span>
-              </span>
-            )}
-            , sent to me{" "}
-            <span className="user-option">{userOrder.frequency}</span>.”
-          </p>
+        <div className="form-wrapper">
+          <form
+            className="order-form container grid"
+            onChange={handleOrderChange}
+          >
+            <FormElement
+              handleClick={handleAccordianClick}
+              questionDisabled={false}
+              isActive={activeStates.method}
+              labelClasses="answer"
+              question="How do you drink your coffee?"
+              questionName="method"
+              firstAnswer="Compatible with Nespresso systems and similar brewers"
+              firstAnswerValue="Capsule"
+              secondAnswer="For pour over or drip methods like Aeropress, Chemex, and V60"
+              secondAnswerValue="Filter"
+              thirdAnswer="Dense and finely ground beans for an intense, flavorful experience"
+              thirdAnswerValue="Espresso"
+            />
+            <FormElement
+              handleClick={handleAccordianClick}
+              questionDisabled={false}
+              isActive={activeStates.type}
+              labelClasses="answer"
+              question="What type of coffee?"
+              questionName="type"
+              firstAnswer="Distinct, high quality coffee from a specific family-owned farm"
+              firstAnswerValue="Single Origin"
+              secondAnswer="Just like regular coffee, except the caffeine has been removed"
+              secondAnswerValue="Decaf"
+              thirdAnswer="Combination of two or three dark roasted beans of organic coffees"
+              thirdAnswerValue="Blended"
+            />
+            <FormElement
+              handleClick={handleAccordianClick}
+              questionDisabled={false}
+              isActive={activeStates.quantity}
+              labelClasses="answer"
+              question="How much would you like?"
+              questionName="quantity"
+              firstAnswer="Perfect for the solo drinker. Yields about 12 delicious cups."
+              firstAnswerValue="250g"
+              secondAnswer="Perfect option for a couple. Yields about 40 delectable cups."
+              secondAnswerValue="500g"
+              thirdAnswer="Perfect for offices and events. Yields about 90 delightful cups."
+              thirdAnswerValue="1000g"
+            />
+            <FormElement
+              handleClick={handleAccordianClick}
+              questionDisabled={disableGrind}
+              isActive={activeStates.grind}
+              labelClasses="answer"
+              question="Want us to grind them?"
+              questionName="grind"
+              firstAnswer="Best choice if you cherish the full sensory experience"
+              firstAnswerValue="Wholebean"
+              secondAnswer="For drip or pour-over coffee methods such as V60 or Aeropress"
+              secondAnswerValue="Filter"
+              thirdAnswer="Course ground beans specially suited for french press coffee"
+              thirdAnswerValue="Cafetiére"
+            />
+            <FormElement
+              handleClick={handleAccordianClick}
+              questionDisabled={false}
+              isActive={activeStates.frequency}
+              labelClasses="answer"
+              question="How often should we deliver?"
+              questionName="frequency"
+              firstAnswer={`${
+                userOrder.quantity === ""
+                  ? ""
+                  : userOrder.quantity === "250g"
+                  ? "$7.20"
+                  : userOrder.quantity === "500g"
+                  ? "$13.00"
+                  : "$22.00"
+              } per shipment. Includes free first-class shipping.`}
+              firstAnswerValue="Every week"
+              secondAnswer={`${
+                userOrder.quantity === ""
+                  ? ""
+                  : userOrder.quantity === "250g"
+                  ? "$9.60"
+                  : userOrder.quantity === "500g"
+                  ? "$17.50"
+                  : "$32.00"
+              } per shipment. Includes free priority shipping.`}
+              secondAnswerValue="Every 2 weeks"
+              thirdAnswer={`${
+                userOrder.quantity === ""
+                  ? ""
+                  : userOrder.quantity === "250g"
+                  ? "$12.00"
+                  : userOrder.quantity === "500g"
+                  ? "$22.00"
+                  : "$42.00"
+              } per shipment. Includes free priority shipping.`}
+              thirdAnswerValue="Every month"
+            />
+          </form>
+          <section className="order-summary">
+            <div className="container">
+              <h2 className="summary-heading">Order Summary</h2>
+              <p className="summary-text">
+                “I drink my coffee{" "}
+                {userOrder.method === "Capsule"
+                  ? "using "
+                  : userOrder.method === "Filter" ||
+                    userOrder.method === "Espresso"
+                  ? "as "
+                  : ""}
+                <span className="user-option">
+                  {userOrder.method === "Capsule"
+                    ? "Capsules"
+                    : userOrder.method}
+                </span>
+                , with a <span className="user-option">{userOrder.type}</span>{" "}
+                type of bean.{" "}
+                <span className="user-option">{userOrder.quantity}</span>
+                {userOrder.method === "Capsule" || userOrder.method === "" ? (
+                  ""
+                ) : (
+                  <span>
+                    {" "}
+                    ground ala{" "}
+                    <span className="user-option">{userOrder.grind}</span>
+                  </span>
+                )}
+                , sent to me{" "}
+                <span className="user-option">{userOrder.frequency}</span>.”
+              </p>
+            </div>
+            <button
+              className={`create-button ${
+                subscribeDisabled ? "subscribe-disabled" : ""
+              }`}
+              onClick={openModal}
+              disabled={subscribeDisabled}
+            >
+              Create my plan!
+            </button>
+          </section>
         </div>
-        <button
-          className={`create-button ${
-            subscribeDisabled ? "subscribe-disabled" : ""
-          }`}
-          onClick={openModal}
-          disabled={subscribeDisabled}
-        >
-          Create my plan!
-        </button>
       </section>
       <Modal
         isOpen={modalIsOpen}

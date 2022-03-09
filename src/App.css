@@ -13,6 +13,7 @@
   --light-cream-transparent: rgba(254, 252, 247, 0.8);
   /* --dark-cream: rgb(3, 2, 0); */
   --grey: rgb(131, 136, 143);
+  --grey-transparent: rgba(131, 136, 143, 0.25);
   --light-grey: rgba(226, 222, 219, 1);
   --white: rgb(255, 255, 255);
   --white-transparent: rgba(255, 255, 255, 0.5);
@@ -1072,15 +1073,6 @@ label {
     padding: 3.2rem 2.6rem 8.4rem 2.5rem;
   }
 
-  .checked-option {
-    background-color: var(--dark-cyan);
-    color: var(--white);
-  }
-
-  .user-option {
-    color: var(--dark-cyan);
-  }
-
   /* Order Summary */
 
   .order-summary .container {
@@ -1090,7 +1082,6 @@ label {
 
   .order-summary .create-button {
     margin: 4rem auto 0;
-    text-align: center;
   }
 
   /* Modal */
@@ -1102,14 +1093,12 @@ label {
   }
 
   .modal .summary-text {
-    color: var(--grey);
     margin: 5.7rem 5.6rem 0.7rem;
   }
 
   .confirmation {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    color: var(--dark-grey-blue-transparent);
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     margin: 0 5.6rem 4.7rem;
   }
 
@@ -1288,6 +1277,7 @@ label {
   .how-it-works {
     margin: 35.1rem auto 0;
     width: min(86.7%, 111rem);
+    padding-bottom: 3.2rem;
   }
 
   .how-it-works .grid {
@@ -1460,10 +1450,88 @@ label {
     width: 133.5%;
   }
 
+  /* Order */
+
+  .order-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 111rem;
+    margin: 16.8rem auto 0;
+  }
+
+  .order-options {
+    display: block;
+    list-style: none;
+  }
+
+  .option {
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.35rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid var(--grey-transparent);
+  }
+
+  .option:nth-of-type(1) {
+    padding-top: 0;
+  }
+
+  .option:nth-of-type(5) {
+    border: none;
+  }
+
+  .option-index {
+    color: var(--grey);
+  }
+
+  .option-index.default-open {
+    color: var(--dark-cyan);
+  }
+
+  .form-wrapper {
+    max-width: 73rem;
+    width: 100%;
+  }
+
+  .order-form {
+    margin: 0;
+    gap: 8.8rem;
+    width: 100%;
+  }
+
+  .question {
+    font-size: 4rem;
+  }
+
+  .answers {
+    margin-top: 5.6rem;
+    gap: 2.3rem;
+  }
+
+  .answer {
+    padding: 3.2rem 2.8rem 8.4rem;
+  }
+
+  /* Order Summary */
+
+  .order-summary .container {
+    margin: 8.8rem 0 0;
+    width: 100%;
+    padding: 2.7rem 6.4rem;
+  }
+
+  .order-summary .create-button {
+    margin: 4rem 0 0 auto;
+  }
+
   /* Footer */
 
   .footer {
-    margin: 20rem auto 8.8rem;
+    margin: 16.8rem auto 8.8rem;
     padding: 4.7rem 8.5rem;
     display: grid;
     grid-template-columns: auto auto 1fr;
