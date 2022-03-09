@@ -187,7 +187,8 @@ label {
 }
 
 .create-button {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   background: var(--dark-cyan);
   border-radius: 6px;
   color: var(--light-cream);
@@ -612,7 +613,7 @@ label {
 }
 
 .order-summary .create-button {
-  margin-top: 5.6rem;
+  margin: 5.6rem auto 0;
   padding: 1.5rem 3.55rem 1.6rem;
 }
 
@@ -886,11 +887,11 @@ label {
 
   .how-steps::before {
     content: "";
-    width: 100%;
+    width: 105%;
     border-top: 2px solid var(--pale-orange);
     position: absolute;
     top: -6.2rem;
-    left: 2rem;
+    left: 1.55rem;
   }
 
   .how-steps:nth-child(3)::before {
@@ -993,6 +994,132 @@ label {
   .headquarters .subheading {
     font-size: 2.4rem;
     margin-bottom: 2.1rem;
+  }
+
+  /* Subscribe */
+
+  /* Hero Section */
+
+  .subscribe-hero {
+    padding: 12.7rem 5.8rem 12.6rem;
+    background-image: url("../public/assets/plan/tablet/image-hero-blackcup.jpg");
+  }
+
+  .subscribe-hero .heading {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  .subscribe-hero .paragraph {
+    margin-top: 2.4rem;
+    width: 39.8rem;
+  }
+
+  /* Steps */
+
+  .steps {
+    margin-top: 14.4rem;
+    padding: 17.6rem 3.9rem 9.6rem 4rem;
+  }
+
+  .steps .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .steps .paragraph {
+    margin-top: 3.8rem;
+    padding-right: 0.5rem;
+  }
+
+  .steps .how-steps::after {
+    background-color: transparent;
+  }
+
+  /* Order */
+
+  .order-form {
+    margin: 14.4rem auto 0;
+    gap: 10rem;
+  }
+
+  .question {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
+  .answers {
+    margin-top: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .answer-value {
+    margin-bottom: 2.4rem;
+  }
+
+  .answer {
+    padding: 3.2rem 2.6rem 8.4rem 2.5rem;
+  }
+
+  .checked-option {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+  }
+
+  .user-option {
+    color: var(--dark-cyan);
+  }
+
+  /* Order Summary */
+
+  .order-summary .container {
+    margin: 14.4rem auto 0;
+    padding: 2.7rem 4.3rem 2.7rem 4.4rem;
+  }
+
+  .order-summary .create-button {
+    margin: 4rem auto 0;
+    text-align: center;
+  }
+
+  /* Modal */
+
+  .modal .heading {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    padding: 4.8rem 5.6rem 4rem;
+  }
+
+  .modal .summary-text {
+    color: var(--grey);
+    margin: 5.7rem 5.6rem 0.7rem;
+  }
+
+  .confirmation {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: var(--dark-grey-blue-transparent);
+    margin: 0 5.6rem 4.7rem;
+  }
+
+  .checkout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5.6rem 5.6rem;
+  }
+
+  .checkout-cost {
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+
+  .modal .create-button {
+    margin: 0;
+    padding: 1.5rem 6.4rem 1.6rem;
   }
 
   /* Footer */
@@ -1170,7 +1297,7 @@ label {
   .how-steps::before {
     width: 125%;
     top: -8.2rem;
-    left: 2rem;
+    left: 1.55rem;
   }
 
   .how-steps:nth-child(3)::before {
@@ -1272,6 +1399,55 @@ label {
   .headquarters .subheading {
     font-size: 3.2rem;
     margin-bottom: 2.4rem;
+  }
+
+  /* Hero Section */
+
+  .subscribe-hero {
+    padding: 13.5rem 8.5rem 12.6;
+    background-image: url("../public/assets/plan/desktop/image-hero-blackcup.jpg");
+  }
+
+  .subscribe-hero .heading {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  .subscribe-hero .paragraph {
+    margin-top: 3.2rem;
+    width: 44.5rem;
+  }
+
+  /* Steps */
+
+  .steps {
+    width: min(100%, 128rem);
+    margin: 16.8rem auto 0;
+    padding: 19.8rem 8.5rem 10rem;
+  }
+
+  .steps .grid {
+    /* width: min(86.7%, 104.5rem); */
+    width: 104.5rem;
+    gap: 9.5rem;
+  }
+
+  .steps .subheading {
+    padding-right: 6rem;
+  }
+
+  .steps .paragraph {
+    margin-top: 4.2rem;
+    /* padding-right: 0.5rem; */
+    padding-right: 1.7rem;
+  }
+
+  .steps .how-steps::after {
+    background-color: transparent;
+  }
+
+  .steps .how-steps::before {
+    width: 133.5%;
   }
 
   /* Footer */

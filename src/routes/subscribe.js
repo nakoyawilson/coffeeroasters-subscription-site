@@ -29,8 +29,9 @@ const Subscribe = () => {
   const customStyles = {
     content: {
       position: "absolute",
-      width: "min(87.2%, 32.7rem)",
-      top: "3.5rem",
+      width:
+        window.innerWidth < 630 ? "min(87.2%, 32.7rem)" : "min(70.3%, 540rem)",
+      top: window.innerWidth < 630 ? "3.5rem" : "21.4rem",
       left: "0",
       right: "0",
       marginLeft: "auto",
@@ -156,39 +157,41 @@ const Subscribe = () => {
           fresh to your door.
         </p>
       </section>
-      <section className="steps grid">
-        <div>
-          <h2 className="subheading">
-            <span className="subheading-index">01</span>
-            Pick your coffee
-          </h2>
-          <p className="paragraph">
-            Select from our evolving range of artisan coffees. Our beans are
-            ethically sourced and we pay fair prices for them. There's new
-            coffees in all profiles every month for you to try out.
-          </p>
-        </div>
-        <div>
-          <h2 className="subheading">
-            <span className="subheading-index">02</span>
-            Choose the frequency
-          </h2>
-          <p className="paragraph">
-            Customize your order frequency, quantity, even your roast style and
-            grind type. Pause, skip or cancel your subscription with no
-            commitment through our online portal.
-          </p>
-        </div>
-        <div>
-          <h2 className="subheading">
-            <span className="subheading-index">03</span>
-            Receive and enjoy!
-          </h2>
-          <p className="paragraph">
-            We ship your package within 48 hours, freshly roasted. Sit back and
-            enjoy award-winning world-class coffees curated to provide a
-            distinct tasting experience.
-          </p>
+      <section className="steps">
+        <div className="grid">
+          <div className="how-steps">
+            <h2 className="subheading">
+              <span className="subheading-index">01</span>
+              Pick your coffee
+            </h2>
+            <p className="paragraph">
+              Select from our evolving range of artisan coffees. Our beans are
+              ethically sourced and we pay fair prices for them. There are new
+              coffees in all profiles every month for you to try out.
+            </p>
+          </div>
+          <div className="how-steps">
+            <h2 className="subheading">
+              <span className="subheading-index">02</span>
+              Choose the frequency
+            </h2>
+            <p className="paragraph">
+              Customize your order frequency, quantity, even your roast style
+              and grind type. Pause, skip or cancel your subscription with no
+              commitment through our online portal.
+            </p>
+          </div>
+          <div className="how-steps">
+            <h2 className="subheading">
+              <span className="subheading-index">03</span>
+              Receive and enjoy!
+            </h2>
+            <p className="paragraph">
+              We ship your package within 48 hours, freshly roasted. Sit back
+              and enjoy award&#8209;winning world&#8209;class coffees curated to
+              provide a distinct tasting experience.
+            </p>
+          </div>
         </div>
       </section>
       <section>
@@ -372,15 +375,30 @@ const Subscribe = () => {
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.
           </p>
-          <button
-            className="create-button"
-            onClick={() => {
-              window.location.reload();
-              scrollToTop();
-            }}
-          >
-            ${totalCost}/month Checkout
-          </button>
+          {window.innerWidth < 630 ? (
+            <button
+              className="create-button"
+              onClick={() => {
+                window.location.reload();
+                scrollToTop();
+              }}
+            >
+              ${totalCost}/mo Checkout
+            </button>
+          ) : (
+            <div className="checkout">
+              <span className="checkout-cost">${totalCost}/mo</span>
+              <button
+                className="create-button"
+                onClick={() => {
+                  window.location.reload();
+                  scrollToTop();
+                }}
+              >
+                Checkout
+              </button>
+            </div>
+          )}
         </section>
       </Modal>
     </main>

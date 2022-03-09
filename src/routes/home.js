@@ -72,8 +72,8 @@ const Home = () => {
             <div className="content-wrapper">
               <h3 className="subheading">Danche</h3>
               <p className="paragraph">
-                Ethiopian hand-harvested blend densely packed with vibrant fruit
-                notes
+                Ethiopian hand&#8209;harvested blend densely packed with vibrant
+                fruit notes
               </p>
             </div>
           </div>
@@ -163,8 +163,8 @@ const Home = () => {
             </h3>
             <p className="paragraph">
               We ship your package within 48 hours, freshly roasted. Sit back
-              and enjoy award-winning world-class coffees curated to provide a
-              distinct tasting experience.
+              and enjoy award&#8209;winning world&#8209;class coffees curated to
+              provide a distinct tasting experience.
             </p>
           </div>
         </div>

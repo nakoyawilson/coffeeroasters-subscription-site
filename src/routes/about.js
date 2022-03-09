@@ -40,7 +40,7 @@ const About = () => {
             year trying to understand the challenges and opportunities in each
             of these places. We collaborate with exceptional coffee growers and
             empower a global community of farmers through with well above
-            fair-trade benchmarks. We also offer training, support farm
+            fair&#8209;trade benchmarks. We also offer training, support farm
             community initiatives, and invest in coffee plant science. Curating
             only the finest blends, we roast each lot to highlight tasting
             profiles distinctive to their native growing region.
@@ -52,10 +52,10 @@ const About = () => {
         <p className="paragraph">
           Although we work with growers who pay close attention to all stages of
           harvest and processing, we employ, on our end, a rigorous quality
-          control program to avoid over-roasting or baking the coffee dry. Every
-          bag of coffee is tagged with a roast date and batch number. Our goal
-          is to roast consistent, user-friendly coffee, so that brewing is easy
-          and enjoyable.
+          control program to avoid over&#8209;roasting or baking the coffee dry.
+          Every bag of coffee is tagged with a roast date and batch number. Our
+          goal is to roast consistent, user&#8209;friendly coffee, so that
+          brewing is easy and enjoyable.
         </p>
       </section>
       <section className="headquarters container">
