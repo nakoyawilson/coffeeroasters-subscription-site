@@ -909,6 +909,93 @@ label {
     padding-right: 1.2rem;
   }
 
+  /* About Us Page */
+
+  /* Hero Section */
+
+  .about {
+    padding: 11.8rem 5.8rem;
+    background-image: url("../public/assets/about/tablet/image-hero-whitecup.jpg");
+  }
+
+  .about .heading {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .about .paragraph {
+    width: 39.8rem;
+  }
+
+  /* Our Commitment */
+
+  .commitment {
+    margin: 14.4rem auto 0;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .commitment-image {
+    width: 28.1rem;
+  }
+
+  .commitment .content-wrapper {
+    width: 33.9rem;
+  }
+
+  /* Quality */
+
+  .quality {
+    margin: 30.4rem auto 0;
+    padding: 22.4rem 7.4rem 6.7rem;
+    text-align: center;
+  }
+
+  .quality::before {
+    content: "";
+    width: min(83.3%, 57.3rem);
+    height: 32rem;
+    background-image: url("../public/assets/about/tablet/image-quality.jpg");
+    top: -16rem;
+  }
+
+  .quality .heading {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
+  .quality .paragraph {
+    padding: 0 0.2rem;
+  }
+
+  /* Headquarters */
+
+  .headquarters {
+    margin: 14.4rem auto 0;
+  }
+
+  .headquarters .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+  }
+
+  .headquarters-illustration {
+    margin: 0 0 4.8rem;
+  }
+
+  .headquarters .subheading {
+    font-size: 2.4rem;
+    margin-bottom: 2.1rem;
+  }
+
+  .contact-info {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
   /* Footer */
 
   .footer {

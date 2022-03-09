@@ -11,12 +11,26 @@ const About = () => {
         </p>
       </section>
       <section className="commitment container">
-        <img
-          src="assets/about/mobile/image-commitment.jpg"
-          alt="Man pouring milk into a cup of coffee"
-          className="commitment-image"
-        />
-        <div>
+        <picture>
+          <source
+            media="(max-width: 629px)"
+            srcset="assets/about/mobile/image-commitment.jpg"
+          />
+          <source
+            media="(min-width: 630px)"
+            srcset="assets/about/tablet/image-commitment.jpg"
+          />
+          <source
+            media="(min-width: 1150px)"
+            srcset="assets/about/desktop/image-commitment.jpg"
+          />
+          <img
+            src="assets/about/mobile/image-commitment.jpg"
+            alt="Man pouring milk into a cup of coffee"
+            className="commitment-image"
+          />
+        </picture>
+        <div className="content-wrapper">
           <h2 className="heading">Our commitment</h2>
           <p className="paragraph">
             We’re built on a simple mission and a commitment to doing good along
