@@ -1286,14 +1286,14 @@ label {
   /* How It Works */
 
   .how-it-works {
-    margin: 35.1rem auto 0;
+    margin: 35.5rem auto 0;
     width: min(86.7%, 111rem);
     padding-bottom: 3.2rem;
   }
 
   .how-it-works .grid {
-    width: 100%;
-    gap: 9.5rem;
+    width: 104.5rem;
+    gap: 8rem;
     margin: 17.8rem 0 6.4rem;
   }
 
@@ -1327,7 +1327,7 @@ label {
   }
 
   .how-it-works .paragraph {
-    padding-right: 2.5rem;
+    /* padding-right: 2.5rem; */
   }
 
   /* About Us Page */
