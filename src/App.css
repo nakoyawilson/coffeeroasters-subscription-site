@@ -210,8 +210,6 @@ label {
   background-color: var(--grey);
   background-image: var(--font-gradient);
   background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
   -webkit-text-fill-color: transparent;
   font-size: 4rem;
   line-height: 7.2rem;
@@ -1191,7 +1189,7 @@ label {
   /* Our Collection */
 
   .collection {
-    margin-top: 16.5rem;
+    margin-top: 16.3rem;
   }
 
   .collection .heading {
@@ -1204,7 +1202,7 @@ label {
     gap: 3rem;
     width: 111.1rem;
     margin: 0 auto;
-    top: -4rem;
+    top: -3.8rem;
   }
 
   .collection-wrapper {
