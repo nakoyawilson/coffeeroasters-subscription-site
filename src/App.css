@@ -1170,7 +1170,7 @@ label {
   /* Hero Section */
   .home-hero {
     background-image: url("../public/assets/home/desktop/image-hero-coffeepress.jpg");
-    padding: 11.7rem 8.5rem 13.2rem;
+    padding: 11.7rem 8.5rem 11.6rem;
   }
 
   .home-hero .content-wrapper {
@@ -1191,7 +1191,7 @@ label {
   /* Our Collection */
 
   .collection {
-    margin-top: 22.2rem;
+    margin-top: 16.8rem;
   }
 
   .collection .heading {
@@ -1299,7 +1299,7 @@ label {
   }
 
   .how-steps::before {
-    width: 125%;
+    width: 133%;
     top: -8.2rem;
     left: 1.55rem;
   }

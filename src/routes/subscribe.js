@@ -218,6 +218,7 @@ const Subscribe = () => {
             onChange={handleOrderChange}
           >
             <FormElement
+              isAutoFocused={true}
               handleClick={handleAccordianClick}
               questionDisabled={false}
               isActive={activeStates.method}
@@ -232,6 +233,7 @@ const Subscribe = () => {
               thirdAnswerValue="Espresso"
             />
             <FormElement
+              isAutoFocused={false}
               handleClick={handleAccordianClick}
               questionDisabled={false}
               isActive={activeStates.type}
@@ -246,6 +248,7 @@ const Subscribe = () => {
               thirdAnswerValue="Blended"
             />
             <FormElement
+              isAutoFocused={false}
               handleClick={handleAccordianClick}
               questionDisabled={false}
               isActive={activeStates.quantity}
@@ -260,6 +263,7 @@ const Subscribe = () => {
               thirdAnswerValue="1000g"
             />
             <FormElement
+              isAutoFocused={false}
               handleClick={handleAccordianClick}
               questionDisabled={disableGrind}
               isActive={activeStates.grind}
@@ -274,6 +278,7 @@ const Subscribe = () => {
               thirdAnswerValue="Cafetiére"
             />
             <FormElement
+              isAutoFocused={false}
               handleClick={handleAccordianClick}
               questionDisabled={false}
               isActive={activeStates.frequency}
