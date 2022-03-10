@@ -1310,12 +1310,12 @@ label {
   }
 
   .how-steps::after {
-    top: -9.6rem;
+    top: -9.9rem;
   }
 
   .how-steps::before {
     width: 133%;
-    top: -8.2rem;
+    top: -8.4rem;
     left: 1.55rem;
   }
 
