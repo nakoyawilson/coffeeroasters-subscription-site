@@ -1163,7 +1163,7 @@ label {
     line-height: 2.6rem;
   }
 
-  .create-button:hover {
+  .create-button:not(.subscribe-disabled):hover {
     background-color: var(--cyan);
     cursor: pointer;
   }
