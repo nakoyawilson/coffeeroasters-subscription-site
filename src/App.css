@@ -1293,7 +1293,7 @@ label {
 
   .how-it-works .grid {
     width: 104.5rem;
-    gap: 8.5rem;
+    gap: 7.9rem;
     margin: 17.8rem 0 6.4rem;
   }
 
@@ -1303,7 +1303,7 @@ label {
 
   .how-steps:nth-of-type(2),
   .how-steps:nth-of-type(3) {
-    margin-left: 1rem;
+    margin-left: 1.6rem;
   }
 
   .how-steps::after {
