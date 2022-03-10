@@ -1204,7 +1204,7 @@ label {
     gap: 3rem;
     width: 111.1rem;
     margin: 0 auto;
-    top: -6rem;
+    top: -4rem;
   }
 
   .collection-wrapper {
@@ -1218,6 +1218,7 @@ label {
 
   .collection-image {
     width: 22.5rem;
+    padding-left: 2rem;
   }
 
   .collection-wrapper .content-wrapper {
