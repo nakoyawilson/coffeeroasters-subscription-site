@@ -11,7 +11,6 @@
   --pale-orange: rgb(253, 214, 186);
   --light-cream: rgb(254, 252, 247);
   --light-cream-transparent: rgba(254, 252, 247, 0.8);
-  /* --dark-cream: rgb(3, 2, 0); */
   --grey: rgb(131, 136, 143);
   --grey-transparent: rgba(131, 136, 143, 0.25);
   --light-grey: rgba(226, 222, 219, 1);
@@ -210,7 +209,8 @@ label {
   background-color: var(--grey);
   background-image: var(--font-gradient);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   font-size: 4rem;
   line-height: 7.2rem;
   text-transform: lowercase;
@@ -801,12 +801,13 @@ label {
   }
 
   .collection-image {
-    width: 23.482rem;
+    width: 25.6rem;
     margin: 0 auto;
   }
 
   .collection-wrapper .content-wrapper {
-    margin-top: 2.955rem;
+    /* margin-top: 2.955rem; */
+    margin-top: 1.5rem;
   }
 
   .collection .paragraph {
