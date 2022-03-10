@@ -197,19 +197,23 @@ const Subscribe = () => {
         <ol className="order-options">
           <li className="option active-option">
             <span className="option-index default-open">01</span>{" "}
-            <span>Preferences</span>
+            <span className="option-text">Preferences</span>
           </li>
           <li className="option">
-            <span className="option-index">02</span> <span>Bean type</span>
+            <span className="option-index">02</span>{" "}
+            <span className="option-text">Bean type</span>
           </li>
           <li className="option">
-            <span className="option-index">03</span> <span>Quantity</span>
+            <span className="option-index">03</span>{" "}
+            <span className="option-text">Quantity</span>
           </li>
           <li className="option">
-            <span className="option-index">04</span> <span>Grind option</span>
+            <span className="option-index">04</span>{" "}
+            <span className="option-text">Grind option</span>
           </li>
           <li className="option">
-            <span className="option-index">05</span> <span>Deliveries</span>
+            <span className="option-index">05</span>{" "}
+            <span className="option-text">Deliveries</span>
           </li>
         </ol>
         <div className="form-wrapper">

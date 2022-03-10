@@ -56,7 +56,8 @@ button {
   border: none;
 }
 
-img {
+img,
+svg {
   display: block;
 }
 
@@ -758,7 +759,7 @@ label {
   }
 
   .nav-link.active-nav-link {
-    /* color: var(--dark-cyan); */
+    color: var(--dark-cyan);
   }
 
   /* Home Page */
@@ -1164,6 +1165,7 @@ label {
 
   .create-button:hover {
     background-color: var(--cyan);
+    cursor: pointer;
   }
 
   /* Header */
@@ -1527,6 +1529,14 @@ label {
     color: var(--dark-cyan);
   }
 
+  .option:hover {
+    cursor: pointer;
+  }
+
+  .option:not(.active-option):hover {
+    opacity: 0.6;
+  }
+
   .form-wrapper {
     max-width: 73rem;
     width: 100%;
@@ -1542,6 +1552,10 @@ label {
     font-size: 4rem;
   }
 
+  .question-wrapper:not(.disabled-button):hover {
+    cursor: pointer;
+  }
+
   .answers {
     margin-top: 5.6rem;
     gap: 2.3rem;
@@ -1549,6 +1563,11 @@ label {
 
   .answer {
     padding: 3.2rem 2.8rem 8.4rem;
+  }
+
+  .answer:not(.checked-option):hover {
+    cursor: pointer;
+    background-color: var(--pale-orange);
   }
 
   /* Order Summary */
@@ -1584,5 +1603,13 @@ label {
 
   .social-icons {
     justify-content: end;
+  }
+
+  .social-icon-wrapper:hover {
+    cursor: pointer;
+  }
+
+  .social-icon-wrapper:hover .social-icon {
+    fill: var(--pale-orange);
   }
 }
