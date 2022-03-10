@@ -195,7 +195,7 @@ const Subscribe = () => {
       </section>
       <section className="order-wrapper">
         <ol className="order-options">
-          <li className="option">
+          <li className="option active-option">
             <span className="option-index default-open">01</span>{" "}
             <span>Preferences</span>
           </li>

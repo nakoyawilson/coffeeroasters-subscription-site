@@ -752,10 +752,13 @@ label {
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color: var(--dark-grey-blue);
     letter-spacing: 0.923077px;
     text-transform: uppercase;
     color: var(--grey);
+  }
+
+  .nav-link.active-nav-link {
+    /* color: var(--dark-cyan); */
   }
 
   /* Home Page */
@@ -1159,6 +1162,10 @@ label {
     line-height: 2.6rem;
   }
 
+  .create-button:hover {
+    background-color: var(--cyan);
+  }
+
   /* Header */
 
   .header {
@@ -1169,6 +1176,10 @@ label {
 
   .nav-links {
     width: 28.3rem;
+  }
+
+  .nav-link:not(.active-nav-link):hover {
+    color: var(--dark-grey-blue);
   }
 
   /* Home Page */
@@ -1493,6 +1504,11 @@ label {
     gap: 2.35rem;
     padding: 2.4rem 0;
     border-bottom: 1px solid var(--grey-transparent);
+    opacity: 0.4;
+  }
+
+  .option.active-option {
+    opacity: 1;
   }
 
   .option:nth-of-type(1) {
@@ -1560,6 +1576,10 @@ label {
 
   .footer-links {
     margin: 0;
+  }
+
+  .footer-link:hover {
+    color: var(--light-cream);
   }
 
   .social-icons {
