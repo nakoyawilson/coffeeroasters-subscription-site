@@ -17,7 +17,7 @@
   --white: rgb(255, 255, 255);
   --white-transparent: rgba(255, 255, 255, 0.5);
   --font-gradient: linear-gradient(
-    180deg,
+    to bottom,
     rgba(254, 252, 247, 0.0001) 0%,
     #fefcf7 100%
   );
@@ -206,16 +206,23 @@ label {
 }
 
 .collection .heading {
-  background-color: var(--grey);
-  background-image: var(--font-gradient);
-  background-clip: text;
-  color: transparent;
-  /* -webkit-text-fill-color: transparent; */
+  color: var(--grey);
   font-size: 4rem;
   line-height: 7.2rem;
   text-transform: lowercase;
   margin-bottom: 1.3rem;
   opacity: 0.5;
+  position: relative;
+}
+
+.collection .heading::after {
+  content: "";
+  background-image: var(--font-gradient);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .collection .grid {
