@@ -31,7 +31,7 @@ const Home = () => {
               <h3 className="subheading">Gran Espresso</h3>
               <p className="paragraph">
                 Light and flavorful blend with cocoa and black pepper for an
-                intense experience
+                intense experience.
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Home = () => {
               <h3 className="subheading">Planalto</h3>
               <p className="paragraph">
                 Brazilian dark roast with rich and velvety body, and hints of
-                fruits and nuts
+                fruits and nuts.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Home = () => {
               <h3 className="subheading">Piccollo</h3>
               <p className="paragraph">
                 Mild and smooth blend featuring notes of toasted almond and
-                dried cherry
+                dried cherry.
               </p>
             </div>
           </div>
@@ -73,7 +73,7 @@ const Home = () => {
               <h3 className="subheading">Danche</h3>
               <p className="paragraph">
                 Ethiopian hand&#8209;harvested blend densely packed with vibrant
-                fruit notes
+                fruit notes.
               </p>
             </div>
           </div>
@@ -88,11 +88,13 @@ const Home = () => {
         </p>
         <div className="grid">
           <div className="reason">
-            <img
-              src="assets/home/desktop/icon-coffee-bean.svg"
-              alt=""
-              className="reason-image"
-            />
+            <div className="image-wrapper">
+              <img
+                src="assets/home/desktop/icon-coffee-bean.svg"
+                alt=""
+                className="reason-image"
+              />
+            </div>
             <div className="content">
               <h3 className="subheading">Best quality</h3>
               <p className="paragraph">
@@ -102,11 +104,13 @@ const Home = () => {
             </div>
           </div>
           <div className="reason">
-            <img
-              src="assets/home/desktop/icon-gift.svg"
-              alt=""
-              className="reason-image"
-            />
+            <div className="image-wrapper">
+              <img
+                src="assets/home/desktop/icon-gift.svg"
+                alt=""
+                className="reason-image"
+              />
+            </div>
             <div className="content">
               <h3 className="subheading">Exclusive benefits</h3>
               <p className="paragraph">
@@ -116,11 +120,13 @@ const Home = () => {
             </div>
           </div>
           <div className="reason">
-            <img
-              src="assets/home/desktop/icon-truck.svg"
-              alt=""
-              className="reason-image"
-            />
+            <div className="image-wrapper">
+              <img
+                src="assets/home/desktop/icon-truck.svg"
+                alt=""
+                className="reason-image"
+              />
+            </div>
             <div className="content">
               <h3 className="subheading">Free shipping</h3>
               <p className="paragraph">
