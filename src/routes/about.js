@@ -13,7 +13,7 @@ const About = () => {
       <section className="commitment container">
         <picture>
           <source
-            media="(max-width: 629px)"
+            media="(max-width: 699px)"
             srcset="assets/about/mobile/image-commitment.jpg"
           />
           <source
@@ -67,11 +67,15 @@ const About = () => {
               alt=""
               className="headquarters-illustration"
             />
-            <h3 className="subheading">United Kingdom</h3>
-            <span className="contact-info">68 Asfordby Rd</span>
-            <span className="contact-info">Alcaston</span>
-            <span className="contact-info">SY6 1YA</span>
-            <span className="contact-info">+44 1241 918425</span>
+            <div className="content-wrapper">
+              <h3 className="subheading">United Kingdom</h3>
+              <div>
+                <span className="contact-info">68 Asfordby Rd</span>
+                <span className="contact-info">Alcaston</span>
+                <span className="contact-info">SY6 1YA</span>
+                <span className="contact-info">+44 1241 918425</span>
+              </div>
+            </div>
           </address>
           <address>
             <img
@@ -79,11 +83,15 @@ const About = () => {
               alt=""
               className="headquarters-illustration"
             />
-            <h3 className="subheading">Canada</h3>
-            <span className="contact-info">1528 Eglinton Avenue</span>
-            <span className="contact-info">Toronto</span>
-            <span className="contact-info">Ontario M4P 1A6</span>
-            <span className="contact-info">+1 416 485 2997</span>
+            <div className="content-wrapper">
+              <h3 className="subheading">Canada</h3>
+              <div>
+                <span className="contact-info">1528 Eglinton Avenue</span>
+                <span className="contact-info">Toronto</span>
+                <span className="contact-info">Ontario M4P 1A6</span>
+                <span className="contact-info">+1 416 485 2997</span>
+              </div>
+            </div>
           </address>
           <address>
             <img
@@ -91,11 +99,15 @@ const About = () => {
               alt=""
               className="headquarters-illustration"
             />
-            <h3 className="subheading">Australia</h3>
-            <span className="contact-info">36 Swanston Street</span>
-            <span className="contact-info">Kewell</span>
-            <span className="contact-info">Victoria</span>
-            <span className="contact-info">+61 4 9928 3629</span>
+            <div className="content-wrapper">
+              <h3 className="subheading">Australia</h3>
+              <div>
+                <span className="contact-info">36 Swanston Street</span>
+                <span className="contact-info">Kewell</span>
+                <span className="contact-info">Victoria</span>
+                <span className="contact-info">+61 4 9928 3629</span>
+              </div>
+            </div>
           </address>
         </div>
       </section>
