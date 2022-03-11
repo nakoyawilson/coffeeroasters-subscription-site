@@ -1019,6 +1019,9 @@ label {
   }
 
   .quality .paragraph {
+    width: min(100%, 54rem);
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 0.2rem;
   }
 
@@ -1459,6 +1462,7 @@ label {
   .quality .paragraph {
     width: 54rem;
     padding: 0 1.7rem;
+    margin-left: 0;
   }
 
   /* Headquarters */
