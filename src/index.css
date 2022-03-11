@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
+
+:root {
+  --font-primary: "Barlow", sans-serif;
+  --font-secondary: "Fraunces", serif;
+  --cyan: rgba(102, 210, 207, 1);
+  --dark-cyan: rgb(14, 135, 132);
+  --dark-grey-blue: rgb(51, 61, 75);
+  --dark-grey-blue-transparent: rgba(51, 61, 75, 0.8);
+  --dark-grey: rgba(44, 52, 62, 1);
+  --pale-orange: rgb(253, 214, 186);
+  --light-cream: rgb(254, 252, 247);
+  --light-cream-transparent: rgba(254, 252, 247, 0.8);
+  --grey: rgb(131, 136, 143);
+  --grey-transparent: rgba(131, 136, 143, 0.25);
+  --light-grey: rgba(226, 222, 219, 1);
+  --white: rgb(255, 255, 255);
+  --white-transparent: rgba(255, 255, 255, 0.5);
+  --font-gradient: linear-gradient(
+    to bottom,
+    rgba(254, 252, 247, 0.0001) 0%,
+    #fefcf7 100%
+  );
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--light-cream);
+  color: var(--dark-grey-blue);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+label {
+  display: block;
+}
+
+/* Media Queries */
+@media screen and (min-width: 700px) {
+  /* General Styles */
+
+  body {
+    text-align: left;
+  }
+}

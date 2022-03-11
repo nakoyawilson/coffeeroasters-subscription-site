@@ -1,0 +1,129 @@
+/* Header  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3.2rem auto 4rem;
+}
+
+.header .logo {
+  width: 14.021rem;
+}
+
+.header .logo,
+.navigation-button {
+  position: relative;
+  z-index: 100;
+}
+
+/* Navigation */
+
+.navigation {
+  background: linear-gradient(
+    to top,
+    rgba(254, 252, 247, 0.504981) 0%,
+    #fefcf7 55.94%
+  );
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(-100%);
+  transition: 500ms ease-in-out;
+  z-index: 10;
+}
+
+.navigation.open {
+  transform: translateY(0);
+  transition: 500ms ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 13rem;
+}
+
+.nav-link {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--dark-grey-blue);
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 700px) {
+  /* Header */
+
+  .header {
+    margin: 4rem auto 5.3rem;
+  }
+
+  .header .logo {
+    width: 23.7rem;
+  }
+
+  /* Navigation */
+
+  .navigation-button {
+    display: none;
+  }
+
+  .navigation {
+    background: none;
+    position: static;
+    transform: translateY(0);
+    width: auto;
+    height: auto;
+  }
+
+  .nav-links {
+    width: 28.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    margin-top: 0;
+  }
+
+  .nav-link {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  .nav-link.active-nav-link {
+    color: var(--dark-cyan);
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  /* Header */
+
+  .header {
+    margin: 4.356rem auto 4.344rem;
+  }
+
+  /* Navigation */
+
+  .nav-links {
+    width: 28.3rem;
+  }
+
+  .nav-link:not(.active-nav-link):hover {
+    color: var(--dark-grey-blue);
+  }
+}

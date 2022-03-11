@@ -1,0 +1,311 @@
+/* Hero Section */
+
+.about {
+  margin: 0 auto;
+  padding: 11.1rem 2.4rem 8.7rem;
+  background-image: url("../../public/assets/about/mobile/image-hero-whitecup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.about .heading {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  color: var(--light-cream);
+}
+
+.about .paragraph {
+  color: var(--light-cream-transparent);
+  margin-top: 2.4rem;
+}
+
+/* Our Commitment */
+
+.commitment {
+  margin: 12rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.commitment-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.commitment .heading {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+}
+
+.commitment .paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--dark-grey-blue-transparent);
+  margin-top: 3rem;
+}
+
+/* Quality */
+
+.quality {
+  margin: 19.8rem auto 0;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  padding: 14.2rem 2.4rem 6.1rem;
+  position: relative;
+}
+
+.quality::before {
+  content: "";
+  width: min(85.3%, 27.9rem);
+  height: 15.6rem;
+  background-image: url("../../public/assets/about/mobile/image-quality.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -7.8rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+.quality .heading {
+  color: var(--light-cream);
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+
+.quality .paragraph {
+  margin-top: 2.4rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--light-cream-transparent);
+}
+
+/* Headquarters */
+
+.headquarters {
+  margin: 12rem auto 0;
+}
+
+.headquarters .heading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--grey);
+}
+
+.headquarters .grid {
+  margin-top: 7.2rem;
+  grid-template-columns: 1fr;
+  gap: 8rem;
+}
+
+.headquarters-illustration {
+  margin: 0 auto 4.8rem;
+}
+
+.headquarters .subheading {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.contact-info {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 700px) {
+  /* Hero Section */
+
+  .about {
+    padding: 11.8rem 5.8rem;
+    background-image: url("../../public/assets/about/tablet/image-hero-whitecup.jpg");
+  }
+
+  .about .heading {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .about .paragraph {
+    width: 39.8rem;
+  }
+
+  /* Our Commitment */
+
+  .commitment {
+    width: min(89.7%, 68.9rem);
+    margin: 14.4rem auto 0;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .commitment-image {
+    width: 28.1rem;
+  }
+
+  .commitment .content-wrapper {
+    width: 33.9rem;
+  }
+
+  /* Quality */
+
+  .quality {
+    margin: 30.4rem auto 0;
+    padding: 22.4rem 7.4rem 6.7rem;
+    text-align: center;
+  }
+
+  .quality::before {
+    content: "";
+    width: min(83.3%, 57.3rem);
+    height: 32rem;
+    background-image: url("../../public/assets/about/tablet/image-quality.jpg");
+    top: -16rem;
+  }
+
+  .quality .heading {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
+  .quality .paragraph {
+    width: min(100%, 54rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.2rem;
+  }
+
+  /* Headquarters */
+
+  .headquarters {
+    margin: 14.4rem auto 0;
+  }
+
+  .headquarters .heading {
+    margin-left: 8.5rem;
+  }
+
+  address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .headquarters .grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 81.6%;
+    margin-left: 8.5rem;
+    gap: 1rem;
+  }
+
+  address .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: space-between;
+  }
+
+  .headquarters-illustration {
+    margin: 0 0 4.8rem;
+  }
+
+  .headquarters .subheading {
+    font-size: 2.4rem;
+    margin-bottom: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  /* About Us Page */
+
+  /* Hero Section */
+
+  .about {
+    padding: 13.7rem 8.5rem;
+    background-image: url("../../public/assets/about/desktop/image-hero-whitecup.jpg");
+  }
+
+  .about .heading {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .about .paragraph {
+    width: 44.5rem;
+  }
+
+  /* Our Commitment */
+
+  .commitment {
+    width: 111rem;
+    margin: 16.8rem auto 0;
+    align-items: center;
+  }
+
+  .commitment-image {
+    width: 44.5rem;
+  }
+
+  .commitment .content-wrapper {
+    width: 54rem;
+  }
+
+  .commitment .paragraph {
+    margin-top: 3.2rem;
+  }
+
+  /* Quality */
+
+  .quality {
+    margin: 25.6rem auto 0;
+    padding: 8.8rem 8.5rem 17.6rem;
+    text-align: left;
+  }
+
+  .quality::before {
+    content: "";
+    width: 44.5rem;
+    height: 47.4rem;
+    background-image: url("../../public/assets/about/desktop/image-quality.jpg");
+    top: auto;
+    left: auto;
+    bottom: 8.8rem;
+    right: 8.5rem;
+  }
+
+  .quality .heading {
+    font-size: 4rem;
+  }
+
+  .quality .paragraph {
+    width: 54rem;
+    padding: 0 1.7rem;
+    margin-left: 0;
+  }
+
+  /* Headquarters */
+
+  .headquarters {
+    margin: 16.8rem auto 0;
+  }
+
+  .headquarters .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9.5rem;
+  }
+
+  .headquarters .subheading {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+}

@@ -1,0 +1,508 @@
+/* Hero Section */
+.home-hero {
+  background-image: url("../../public/assets/home/mobile/image-hero-coffeepress.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 10rem 2.4rem 9.9rem;
+  margin: 0 auto;
+}
+
+.home-hero .heading {
+  color: var(--light-cream);
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.home-hero .paragraph {
+  color: var(--light-cream-transparent);
+  margin: 2.4rem 0 3.9rem;
+}
+
+.home-hero .create-button {
+  margin: 0 auto;
+}
+
+/* Our Collection */
+
+.collection {
+  margin-top: 12rem;
+}
+
+.collection .heading {
+  color: var(--grey);
+  font-size: 4rem;
+  line-height: 7.2rem;
+  text-transform: lowercase;
+  margin-bottom: 1.3rem;
+  opacity: 0.5;
+  position: relative;
+}
+
+.collection .heading::after {
+  content: "";
+  background-image: var(--font-gradient);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.collection .grid {
+  grid-template-columns: 1fr;
+  gap: 4.8rem;
+}
+
+.collection-image {
+  width: 20rem;
+  margin: 0 auto 2.4rem;
+}
+
+.collection .subheading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.collection .paragraph {
+  width: min(75.2%, 28.2rem);
+  margin: 1.6rem auto 0;
+}
+
+/* Why Choose Us */
+
+.choose-us {
+  background: var(--dark-grey);
+  color: var(--light-cream);
+  margin: 12rem auto 0;
+  padding: 6.4rem 2.4rem 66.1rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.choose-us .heading {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+
+.choose-us .paragraph {
+  color: var(--light-cream-transparent);
+  margin: 2.4rem 0 0;
+}
+
+.choose-us .grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 38.2rem);
+  gap: 2.4rem;
+  position: absolute;
+  width: 85.3%;
+  top: 30.5rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reason {
+  background: var(--dark-cyan);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reason-image {
+  width: 7.2rem;
+  margin: 0 auto 5.6rem;
+}
+
+.reason:last-of-type .reason-image {
+  margin-bottom: 6.7rem;
+}
+
+.reason .subheading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.reason .paragraph {
+  width: 85.8%;
+  margin: 2.4rem auto 0;
+}
+
+/* How It Works */
+
+.how-it-works {
+  margin-top: 71.7rem;
+}
+
+.how-it-works .heading {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--grey);
+}
+
+.how-it-works .grid {
+  grid-template-columns: 1fr;
+  gap: 5.6rem;
+  margin: 8rem auto 7.9rem;
+}
+
+.how-it-works .subheading {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.how-it-works .paragraph {
+  width: 87.2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.how-it-works .create-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 700px) {
+  /* Hero Section */
+  .home-hero {
+    background-image: url("../../public/assets/home/tablet/image-hero-coffeepress.jpg");
+    padding: 10.4rem 5.8rem;
+  }
+
+  .home-hero .content-wrapper {
+    width: 39.8rem;
+  }
+
+  .home-hero .heading {
+    color: var(--light-cream);
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  .home-hero .paragraph {
+    margin: 2.4rem 0 4rem;
+  }
+
+  .home-hero .create-button {
+    margin: 0 auto 0 0;
+  }
+
+  /* Our Collection */
+
+  .collection {
+    margin-top: 14.4rem;
+  }
+
+  .collection .heading {
+    font-size: 9.6rem;
+    font-size: 9.6rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .collection .grid {
+    gap: 3.2rem;
+    position: relative;
+    top: -2.55rem;
+  }
+
+  .collection-wrapper {
+    display: flex;
+    justify-content: center;
+    width: min(74.6%, 57.3rem);
+    margin: 0 auto;
+    gap: 3.5rem;
+  }
+
+  .collection-image {
+    width: 25.6rem;
+    margin: 0 auto;
+  }
+
+  .collection-wrapper .content-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .collection .paragraph {
+    width: min(100%, 28.2rem);
+    margin: 2.4rem 0 0;
+  }
+
+  /* Why Choose Us */
+
+  .choose-us {
+    margin: 12rem auto 0;
+    padding: 5.6rem 7.4rem 36.8rem;
+    position: relative;
+  }
+
+  .choose-us .heading {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    text-align: center;
+  }
+
+  .choose-us .paragraph {
+    text-align: center;
+    padding: 0 2.5rem;
+    width: min(54rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .choose-us .grid {
+    width: min(83.3%, 57.3rem);
+    grid-template-rows: repeat(3, 1fr);
+    top: 27.5rem;
+  }
+
+  .reason {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5.5rem;
+    padding: 4.1rem 4.8rem 4.1rem 7rem;
+  }
+
+  .reason-image {
+    width: 5.6rem;
+    margin: 0;
+  }
+
+  .reason:last-of-type .reason-image {
+    margin-bottom: 0;
+  }
+
+  .reason .paragraph {
+    width: auto;
+    text-align: left;
+    margin: 1.6rem 0 0;
+    padding: 0;
+  }
+
+  /* How It Works */
+
+  .how-it-works {
+    margin: 43.4rem auto 0;
+    width: min(89.5%, 68.9rem);
+  }
+
+  .how-it-works .grid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 11.9rem 0 4.4rem;
+  }
+
+  .how-steps {
+    position: relative;
+  }
+
+  .how-steps::after {
+    content: "";
+    width: 3.1rem;
+    height: 3.1rem;
+    background-color: var(--light-cream);
+    border: 2px solid var(--dark-cyan);
+    border-radius: 50%;
+    position: absolute;
+    top: -7.7rem;
+    left: 0;
+  }
+
+  .how-steps::before {
+    content: "";
+    width: 105%;
+    border-top: 2px solid var(--pale-orange);
+    position: absolute;
+    top: -6.2rem;
+    left: 1.55rem;
+  }
+
+  .how-steps:nth-child(3)::before {
+    content: none;
+  }
+
+  .how-it-works .subheading {
+    margin-bottom: 3.8rem;
+  }
+
+  .how-it-works .paragraph {
+    margin-left: 0;
+    padding-right: 1.2rem;
+  }
+
+  .how-it-works .create-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1310px) {
+  /* Hero Section */
+  .home-hero {
+    background-image: url("../../public/assets/home/desktop/image-hero-coffeepress.jpg");
+    padding: 11.7rem 8.5rem 11.6rem;
+  }
+
+  .home-hero .content-wrapper {
+    width: 49.3rem;
+  }
+
+  .home-hero .heading {
+    color: var(--light-cream);
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  .home-hero .paragraph {
+    margin: 3.2rem 0 5.6rem;
+    padding-right: 5rem;
+  }
+
+  /* Our Collection */
+
+  .collection {
+    margin-top: 16.3rem;
+  }
+
+  .collection .heading {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+
+  .collection .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    width: 111.1rem;
+    margin: 0 auto;
+    top: -3.8rem;
+  }
+
+  .collection-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 7.5rem;
+    text-align: center;
+  }
+
+  .collection-image {
+    width: 24rem;
+    padding-left: 1.5rem;
+  }
+
+  .collection-wrapper .content-wrapper {
+    margin-top: 0;
+  }
+
+  .collection .paragraph {
+    width: auto;
+    margin: 2.4rem 0 0;
+  }
+
+  /* Why Choose Us */
+
+  .choose-us {
+    margin: 16rem auto 0;
+    padding: 10rem 0 31.7rem;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .choose-us .heading {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .choose-us .paragraph {
+    margin: 3.2rem auto 0;
+    width: 54rem;
+    padding: 0 0.6rem;
+  }
+
+  .choose-us .grid {
+    width: min(86.7%, 111rem);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    top: 34.6rem;
+  }
+
+  .reason {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7.2rem 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5.6rem;
+    padding: 7.2rem 4.8rem 4.8rem 4.7rem;
+    text-align: center;
+  }
+
+  .reason .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reason-image {
+    width: 7.2rem;
+  }
+
+  .reason .paragraph {
+    margin-top: 2.4rem;
+    width: auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  /* How It Works */
+
+  .how-it-works {
+    margin: 35.5rem auto 0;
+    width: min(86.7%, 111rem);
+    padding-bottom: 3.2rem;
+  }
+
+  .how-it-works .grid {
+    width: 104.5rem;
+    gap: 9.5rem;
+    margin: 17.8rem 0 6.4rem;
+  }
+
+  .how-steps {
+    position: relative;
+  }
+
+  .how-steps::after {
+    top: -9.9rem;
+  }
+
+  .how-steps::before {
+    width: 133%;
+    top: -8.4rem;
+    left: 1.55rem;
+  }
+
+  .how-steps:nth-child(3)::before {
+    content: none;
+  }
+
+  .how-it-works .subheading {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    margin-bottom: 4.3rem;
+    padding-right: 5rem;
+  }
+
+  .how-steps .paragraph {
+    padding-right: 0.5rem;
+  }
+}

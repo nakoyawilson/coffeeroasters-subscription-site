@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./routes/home";
 import About from "./routes/about";
 import Subscribe from "./routes/subscribe";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>

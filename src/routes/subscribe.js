@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import FormElement from "../components/FormElement";
 import Modal from "react-modal";
+import "./subscribe.css";
 
 const Subscribe = () => {
   const scrollToTop = useOutletContext();
