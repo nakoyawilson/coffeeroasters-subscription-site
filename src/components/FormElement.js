@@ -14,7 +14,7 @@ const FormElement = (props) => {
         onClick={props.handleClick}
         disabled={props.questionDisabled}
         value={props.questionName}
-        autoFocus={props.isAutoFocused}
+        // autoFocus={props.isAutoFocused}
       >
         <h2 className="question">{props.question}</h2>
         <img
