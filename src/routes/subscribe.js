@@ -24,6 +24,7 @@ const Subscribe = () => {
     frequency: false,
   });
   const [subscribeDisabled, setSubscribeDisabled] = useState(true);
+  const [optionIndex, setOptionIndex] = useState(0);
 
   Modal.setAppElement("#root");
 
@@ -129,25 +130,37 @@ const Subscribe = () => {
   };
 
   const handleAccordianClick = (e) => {
-    let optionIndex = 0;
+    let index = optionIndex;
     const buttonStates = { ...activeStates };
     if (e.target.textContent.includes("How do you drink your coffee?")) {
       buttonStates.method = !buttonStates.method;
+      if (buttonStates.method) {
+        index = 0;
+      }
     } else if (e.target.textContent.includes("What type of coffee?")) {
       buttonStates.type = !buttonStates.type;
-      optionIndex = 1;
+      if (buttonStates.type) {
+        index = 1;
+      }
     } else if (e.target.textContent.includes("How much would you like?")) {
       buttonStates.quantity = !buttonStates.quantity;
-      optionIndex = 2;
+      if (buttonStates.quantity) {
+        index = 2;
+      }
     } else if (e.target.textContent.includes("Want us to grind them?")) {
       buttonStates.grind = !buttonStates.grind;
-      optionIndex = 3;
+      if (buttonStates.grind) {
+        index = 3;
+      }
     } else if (e.target.textContent.includes("How often should we deliver?")) {
       buttonStates.frequency = !buttonStates.frequency;
-      optionIndex = 4;
+      if (buttonStates.frequency) {
+        index = 4;
+      }
     }
     setActiveStates(buttonStates);
-    updateActiveOption(optionIndex);
+    setOptionIndex(index);
+    updateActiveOption(index);
   };
 
   const openModal = () => {
