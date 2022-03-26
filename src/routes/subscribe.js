@@ -120,20 +120,34 @@ const Subscribe = () => {
     setUserOrder(order);
   };
 
+  const updateActiveOption = (index) => {
+    const options = document.querySelectorAll(".option");
+    options.forEach((option) => {
+      option.classList.remove("active-option");
+    });
+    options[index].classList.add("active-option");
+  };
+
   const handleAccordianClick = (e) => {
+    let optionIndex = 0;
     const buttonStates = { ...activeStates };
     if (e.target.textContent.includes("How do you drink your coffee?")) {
       buttonStates.method = !buttonStates.method;
     } else if (e.target.textContent.includes("What type of coffee?")) {
       buttonStates.type = !buttonStates.type;
+      optionIndex = 1;
     } else if (e.target.textContent.includes("How much would you like?")) {
       buttonStates.quantity = !buttonStates.quantity;
+      optionIndex = 2;
     } else if (e.target.textContent.includes("Want us to grind them?")) {
       buttonStates.grind = !buttonStates.grind;
+      optionIndex = 3;
     } else if (e.target.textContent.includes("How often should we deliver?")) {
       buttonStates.frequency = !buttonStates.frequency;
+      optionIndex = 4;
     }
     setActiveStates(buttonStates);
+    updateActiveOption(optionIndex);
   };
 
   const openModal = () => {
