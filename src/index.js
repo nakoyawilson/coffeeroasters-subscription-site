@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./App";
 import Home from "./routes/home";
 import About from "./routes/about";
@@ -15,7 +15,7 @@ ReactDOM.render(
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="subscribe" element={<Subscribe />} />
-          <Route path="*" element={<p>There's nothing here!</p>} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Route>
       </Routes>
     </BrowserRouter>
